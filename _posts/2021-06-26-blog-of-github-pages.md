@@ -1,3 +1,11 @@
+---
+layout: post
+title: 利用Jekyll或Hexo搭建GitHub Pages的区别
+date: 2021-07-04 23:48:33.000000000 +09:00
+categories: [blog]
+tags: [blog]
+---
+
 不用mediawiki或wordpress是因为要自己买服务器。哪天没续费，数据就没有了。
 
 Jekyll 和 hexo 都是静态网站生成工具
