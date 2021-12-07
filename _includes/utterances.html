@@ -1,0 +1,22 @@
+<div class="utterances-container"> 
+  
+  <script src="https://utteranc.es/client.js"
+        repo="elesos/elesos.github.io"
+        issue-term="title"
+        label="Comment"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+      window.onmessage = evt => {
+        if (evt.origin === 'https://utteranc.es') {
+          toggle.updateCommentStyle();
+          window.onmessage = null;
+        }
+      }        
+    });
+</script>
