@@ -1,6 +1,6 @@
 ---
 layout: post
-title: git 常用操作
+title: git代码提交规范
 date: 2021-07-07 23:48:33.000000000 +09:00
 categories: [git]
 tags: [git]
