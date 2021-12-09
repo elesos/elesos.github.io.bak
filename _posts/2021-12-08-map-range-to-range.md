@@ -13,3 +13,5 @@ float output_end   = 1000.0f;
 float input = 1.25;
 float output = output_start + ((output_end - output_start) / (input_end - input_start)) * (input - input_start);
 ```
+## 参考
+https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another
