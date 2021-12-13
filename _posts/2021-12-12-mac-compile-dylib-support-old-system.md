@@ -2,7 +2,7 @@
 layout: post
 title: Mac如何编译支持老版本系统的库
 date: 2021-12-12 23:30:00 +0800
-categories: [艺搜科技, 技术, 库]
+categories: [艺搜科技, 技术]
 tags: [库]
 ---
 Xcode 可以指定 general -> deployment info-> deployment target
