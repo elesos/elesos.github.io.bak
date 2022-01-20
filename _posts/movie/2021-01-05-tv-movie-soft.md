@@ -8,4 +8,8 @@ tags: [电视软件]
 
 智能电视上很多视频都收费。要充会员才能看，装了这2个软件，付费视频都能免费看了。
 
+https://elesos.github.io/assets/video/free_movie.mp4
+
+```
 {% dplayer "url=https://elesos.github.io/assets/video/free_movie.mp4"  "loop=yes" "theme=#FADFA3" "autoplay=false" "token=tokendemo" %}
+```
