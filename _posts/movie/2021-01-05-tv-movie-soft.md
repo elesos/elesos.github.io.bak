@@ -10,6 +10,6 @@ tags: [电视软件]
 
 https://elesos.github.io/assets/video/free_movie.mp4
 
-```
+<code>
 {% dplayer "url=https://elesos.github.io/assets/video/free_movie.mp4"  "loop=yes" "theme=#FADFA3" "autoplay=false" "token=tokendemo" %}
-```
+</code>

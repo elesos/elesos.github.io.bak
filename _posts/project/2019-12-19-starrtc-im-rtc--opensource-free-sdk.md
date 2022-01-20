@@ -70,9 +70,9 @@ P2P直连
 ==
 树莓派小车将视频实时传回到操控者的手机上：
 https://elesos.github.io/assets/video/rpi_car.mp4
-```
+<code>
 {% dplayer "url=https://elesos.github.io/assets/video/rpi_car.mp4"  "loop=yes" "theme=#FADFA3" "autoplay=false" "token=tokendemo" %}
-```
+</code>
 物联网硬件
 ==
 海思arm板采集mac电脑的hdmi信号进行实时录屏直播：
