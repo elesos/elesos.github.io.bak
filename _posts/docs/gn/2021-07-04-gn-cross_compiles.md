@@ -87,7 +87,7 @@ be used rather than `target_cpu` most of the time**.
 By default, dependencies listed in the `deps` variable of a rule use the
 same (currently active) toolchain. You may specify a different toolchain
 using the `foo(bar)` label notation as described in [the label section
-of the reference doc]({% link _posts/docs/gn/2021-07-04-gn-reference.md#Toolchains %}).
+of the reference doc]({% link _posts/docs/gn/2021-07-04-gn-reference.md %}) #Toolchains.
 
 Here's an example of when to use `target_cpu` vs `current_cpu`:
 
