@@ -1570,6 +1570,7 @@ tags: [gn]
 ### <a name="func_create_bundle"></a>**create_bundle**: [ios/macOS] Build an iOS or macOS bundle.
 
 ```
+{% raw %}
   This target generates an iOS or macOS bundle (which is a directory with a
   well-know structure). This target does not define any sources, instead they
   are computed from all "bundle_data" target this one depends on transitively
@@ -1588,6 +1589,7 @@ tags: [gn]
   contribute to any data or data_deps. Required runtime dependencies should be
   placed in the bundle. A create_bundle can declare its own explicit data and
   data_deps, however.
+  {% endraw %}
 ```
 
 #### **Code signing**
