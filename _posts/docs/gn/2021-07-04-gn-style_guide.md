@@ -270,7 +270,7 @@ in the past.
 
 ### Type
 
-Arguments support all the [GN language types]({% link gn-language.md#Language %}).
+Arguments support all the [GN language types]({% link gn-language.md %}) 之 Language.
 
 In the vast majority of cases `boolean` is the preferred type, since most
 arguments are enabling or disabling features or includes.
