@@ -82,7 +82,7 @@ target_cpu = "x86"
 target_cpu = "x64"
 ```
 
-See [GN cross compiles](cross_compiles.md) for more info.
+See [GN cross compiles](gn-cross_compiles.html) for more info.
 
 ## Step-by-step
 
