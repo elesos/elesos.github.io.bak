@@ -147,7 +147,7 @@ ninja -C out some/path/to/target:my_target
 ### Declaring dependencies
 
 Let's look at the targets defined in
-[examples/simple_build/BUILD.gn](../examples/simple_build/BUILD.gn). There is a
+../examples/simple_build/BUILD.gn . There is a
 static library that defines one function, `GetStaticText()`:
 
 ```
