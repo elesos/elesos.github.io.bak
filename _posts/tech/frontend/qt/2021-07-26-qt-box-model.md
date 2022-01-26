@@ -11,7 +11,7 @@ https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model
 
 QFrame是基本控件的基类，QWidget是QFrame基类。
 
-
+![](/assets/book/qt_position.png)
 
 x()：左上角的坐标，geometry.x()：不包括标题栏、边框的客户区，frameGeometry.x()：左上角的坐标
 
