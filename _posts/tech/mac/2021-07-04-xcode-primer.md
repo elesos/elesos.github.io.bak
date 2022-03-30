@@ -39,9 +39,15 @@ Open the file [YourApp].xcodeproj/xcuserdata/[YourUsername].xcuserdata/xcschemes
 
 The "SchemeUserState" dictionary has entries for each scheme. In my file at least, they seem to be in alphabetical order. However, there is an integer key "orderHint" that seems to control the order in the scheme dropdown.
 
-# 
+# 快捷键
 
+control + command + ↑ 或 ↓ 在.m/.c/.cpp 文件和头文件.h之间切换
 
+注释 command +/
+
+mac 折叠：cmd+鼠标点击
+
+xcode 跳转到某一行：command+L
 
 
 
