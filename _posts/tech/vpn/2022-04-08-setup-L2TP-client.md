@@ -11,14 +11,6 @@ tags: [vpn]
 IPsec/L2TP 在 Android, iOS, OS X 和 Windows 上均受支持，无需安装额外的软件。设置过程通常只需要几分钟。如果无法连接,请首先检查是否输入了正确的 VPN 登录凭证。
 
 ---
-* 平台名称
-  * [Windows](#windows)
-  * [OS X (macOS)](#os-x)
-  * [Android](#android)
-  * [iOS (iPhone/iPad)](#ios)
-  * [Chromebook](#chromebook)
-  * [Linux](#linux)
-* [故障排除](#故障排除)
 
 ## Windows
 

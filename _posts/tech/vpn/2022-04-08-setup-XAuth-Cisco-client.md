@@ -11,12 +11,7 @@ IPsec/XAuth ("Cisco IPsec") 在 Android, iOS 和 OS X 上均受支持，无需�
 IPsec/XAuth 模式也称为 "Cisco IPsec"。该模式通常能够比 IPsec/L2TP **更高效**地传输数据（较低的额外开销）。
 
 ---
-* 平台名称
-  * [Windows](#windows)
-  * [OS X (macOS)](#os-x)
-  * [Android](#android)
-  * [iOS (iPhone/iPad)](#ios)
-  * [Linux](#linux)
+
 
 ## Windows
 

@@ -68,6 +68,6 @@ the hostname in the container that is used as the password, not that of the host
 
 ss-server -s 0.0.0.0        -p 8388 -k bao231@164808711 -m aes-256-cfb -t 300 --fast-open -d 8.8.8.8 -d 8.8.4.4 -u
 ```
-
+客户端： https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients
 
 https://www.flyzy2005.com/fan-qiang/shadowsocks/shadowsocks-iphone-ios-config/

@@ -8,19 +8,6 @@ tags: [vpn]
 
 
 
-
-
-* [导言](#导言)
-* [使用辅助脚本配置 IKEv2](#使用辅助脚本配置-ikev2)
-* [配置 IKEv2 VPN 客户端](#配置-ikev2-vpn-客户端)
-* [管理客户端证书](#管理客户端证书)
-* [故障排除](#故障排除)
-* [更改 IKEv2 服务器地址](#更改-ikev2-服务器地址)
-* [更新 IKEv2 辅助脚本](#更新-ikev2-辅助脚本)
-* [手动配置 IKEv2](#手动配置-ikev2)
-* [移除 IKEv2](#移除-ikev2)
-* [参考链接](#参考链接)
-
 ## 导言
 
 现代操作系统（比如 Windows 7 和更新版本）支持 IKEv2 协议标准。因特网密钥交换（英语：Internet Key Exchange，简称 IKE 或 IKEv2）是一种网络协议，归属于 IPsec 协议族之下，用以创建安全关联 (Security Association, SA)。与 IKE 版本 1 相比较，IKEv2 的 [功能改进](https://en.wikipedia.org/wiki/Internet_Key_Exchange#Improvements_with_IKEv2) 包括比如通过 MOBIKE 实现 Standard Mobility 支持，以及更高的可靠性。
