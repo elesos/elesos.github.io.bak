@@ -306,7 +306,7 @@ Fedora 28（和更新版本）和 CentOS 8/7 用户可以使用 IPsec/XAuth(clie
 1. 单击 **确定** 关闭 **高级设置**。
 1. 单击 **确定** 保存 VPN 连接的详细信息。
 
-请参见 VPN 连接属性对话框的[屏幕截图](images/vpn-properties-zh.png)。
+请参见 VPN 连接属性对话框的屏幕截图(images/vpn-properties-zh.png)。
 
 ### Windows 10 正在连接
 
@@ -349,7 +349,7 @@ echo 1 > /proc/sys/net/ipv4/ip_no_pmtu_disc
 
 如果你的 Android 6.x 或者 7.x 设备无法连接，请尝试以下步骤：
 
-1. 单击 VPN 连接旁边的设置按钮，选择 "Show advanced options" 并且滚动到底部。如果选项 "Backward compatible mode" 存在（参见[屏幕截图](images/vpn-profile-Android.png)），请启用它并重试连接。如果不存在，请尝试下一步。
+1. 单击 VPN 连接旁边的设置按钮，选择 "Show advanced options" 并且滚动到底部。如果选项 "Backward compatible mode" 存在（参见屏幕截图(images/vpn-profile-Android.png)），请启用它并重试连接。如果不存在，请尝试下一步。
 1. 编辑 VPN 服务器上的 `/etc/ipsec.conf`。找到 `sha2-truncbug` 一行并切换它的值。也就是说，将 `sha2-truncbug=no` 替换为 `sha2-truncbug=yes`，或者将 `sha2-truncbug=yes` 替换为 `sha2-truncbug=no`。保存修改并运行 `service ipsec restart`。然后重新连接 VPN。
 
 **Docker 用户：** 如需在 `/etc/ipsec.conf` 中设置 `sha2-truncbug=yes`（默认为 `no`），你可以在[你的 env 文件](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh.md#如何使用本镜像)中添加 `VPN_SHA2_TRUNCBUG=yes`，然后重新创建 Docker 容器。

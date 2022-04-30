@@ -63,7 +63,7 @@ VPN 连接成功后，你会在 VPN Connect 状态窗口中看到 **tunnel enabl
 
 ## Android
 
-> Android 12 仅支持 [IKEv2](ikev2-howto-zh.md) 模式。
+> Android 12 仅支持 IKEv2(ikev2-howto-zh.md) 模式。
 
 1. 启动 **设置** 应用程序。
 1. 单击 **网络和互联网**。或者，如果你使用 Android 7 或更早版本，在 **无线和网络** 部分单击 **更多...**。
