@@ -35,7 +35,7 @@ IPsec/XAuth 模式也称为 "Cisco IPsec"。该模式通常能够比 IPsec/L2TP 
 
 VPN 连接成功后，你会在 VPN Connect 状态窗口中看到 **tunnel enabled** 字样。单击 "Network" 选项卡，并确认 **Established - 1** 显示在 "Security Associations" 下面。最后你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#故障排除)。
+如果在连接过程中遇到错误，请参见 故障排除(clients-zh.md#故障排除)。
 
 ## OS X
 
@@ -59,7 +59,7 @@ VPN 连接成功后，你会在 VPN Connect 状态窗口中看到 **tunnel enabl
 
 要连接到 VPN：使用菜单栏中的图标，或者打开系统偏好设置的网络部分，选择 VPN 并单击 **连接**。最后你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#故障排除)。
+如果在连接过程中遇到错误，请参见 故障排除(clients-zh.md#故障排除)。
 
 ## Android
 
@@ -83,7 +83,7 @@ VPN 连接成功后，你会在 VPN Connect 状态窗口中看到 **tunnel enabl
 
 VPN 连接成功后，会在通知栏显示图标。最后你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#故障排除)。
+如果在连接过程中遇到错误，请参见 故障排除(clients-zh.md#故障排除)。
 
 ## iOS
 
@@ -103,7 +103,7 @@ VPN 连接成功后，会在通知栏显示图标。最后你可以到 [这里](
 
 VPN 连接成功后，会在通知栏显示图标。最后你可以到 [这里](https://www.ipchicken.com) 检测你的 IP 地址，应该显示为`你的 VPN 服务器 IP`。
 
-如果在连接过程中遇到错误，请参见 [故障排除](clients-zh.md#故障排除)。
+如果在连接过程中遇到错误，请参见 故障排除(clients-zh.md#故障排除)。
 
 ## Linux
 
@@ -132,7 +132,7 @@ VPN 连接成功后，你可以到 [这里](https://www.ipchicken.com) 检测你
 
 ### 其它 Linux
 
-其它 Linux 版本用户可以使用 [IPsec/L2TP](clients-zh.md#linux) 模式连接。
+其它 Linux 版本用户可以使用 IPsec/L2TP(clients-zh.md#linux) 模式连接。
 
 ## 致谢
 

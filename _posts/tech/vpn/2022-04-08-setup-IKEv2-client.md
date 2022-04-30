@@ -25,9 +25,9 @@ Libreswan 支持通过使用 RSA 签名算法的 X.509 Machine Certificates 来�
 
 ## 使用辅助脚本配置 IKEv2
 
-**重要：** 在继续之前，你应该已经成功地 [搭建自己的 VPN 服务器](../README-zh.md)。**Docker 用户请看 [这里](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh.md#配置并使用-ikev2-vpn)**。
+**Docker 用户请看 [这里](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh.md) 的配置并使用-ikev2-vpn部分**。
 
-使用这个 [辅助脚本](../extras/ikev2setup.sh) 来自动地在 VPN 服务器上配置 IKEv2：
+使用这个 辅助脚本 (../extras/ikev2setup.sh) 来自动地在 VPN 服务器上配置 IKEv2：
 
 ```bash
 # 使用默认选项配置 IKEv2
@@ -38,7 +38,7 @@ sudo ikev2.sh
 
 **注：** 如果 IKEv2 已经配置完成，但是你想要自定义 IKEv2 选项，首先 [移除 IKEv2](#移除-ikev2)，然后运行 `sudo ikev2.sh` 重新配置。
 
-在完成之后，请转到 [配置 IKEv2 VPN 客户端](#配置-ikev2-vpn-客户端)。高级用户可以启用 [仅限 IKEv2 模式](advanced-usage-zh.md#仅限-ikev2-的-vpn)。这是可选的。
+在完成之后，请转到 [配置 IKEv2 VPN 客户端](#配置-ikev2-vpn-客户端)。高级用户可以启用 仅限 IKEv2 模式(advanced-usage-zh.md#仅限-ikev2-的-vpn)。这是可选的。
 
 <details>
 <summary>
@@ -684,16 +684,10 @@ sudo ikev2.sh --revokeclient [client name]
 
 ## 故障排除
 
-*其他语言版本: [English](ikev2-howto.md#troubleshooting), [简体中文](ikev2-howto-zh.md#故障排除)。如果你有意见或建议，请[发送反馈](https://bit.ly/vpn-feedback)。*
+*其他语言版本: English(ikev2-howto.md#troubleshooting), 简体中文(ikev2-howto-zh.md#故障排除)。如果你有意见或建议，请[发送反馈](https://bit.ly/vpn-feedback)。*
 
-**另见：** [检查日志及 VPN 状态](clients-zh.md#检查日志及-vpn-状态)，[IKEv1 故障排除](clients-zh.md#故障排除) 和 [高级用法](advanced-usage-zh.md)。
+**另见：** 检查日志及 VPN 状态(clients-zh.md#检查日志及-vpn-状态)，IKEv1 故障排除(clients-zh.md#故障排除) 和 高级用法(advanced-usage-zh.md)。
 
-* [连接 IKEv2 后不能打开网站](#连接-ikev2-后不能打开网站)
-* [IKE 身份验证凭证不可接受](#ike-身份验证凭证不可接受)
-* [参数错误 policy match error](#参数错误-policy-match-error)
-* [IKEv2 在一小时后断开连接](#ikev2-在一小时后断开连接)
-* [无法同时连接多个 IKEv2 客户端](#无法同时连接多个-ikev2-客户端)
-* [其它已知问题](#其它已知问题)
 
 ### 连接 IKEv2 后不能打开网站
 
@@ -708,7 +702,7 @@ sudo ikev2.sh --revokeclient [client name]
 
    此设置 **不会** 在重启后保持。要永久更改 MTU 大小，请参阅网络上的相关文章。
 
-1. 如果更改 MTU 大小无法解决问题，请尝试 [Android MTU/MSS 问题](clients-zh.md#android-mtumss-问题) 中的解决方案。
+1. 如果更改 MTU 大小无法解决问题，请尝试 Android MTU/MSS 问题(clients-zh.md#android-mtumss-问题) 中的解决方案。
 
 1. 在某些情况下，Windows 在连接后不使用 IKEv2 指定的 DNS 服务器。要解决此问题，可以在网络连接属性 -> TCP/IPv4 中手动输入 DNS 服务器，例如 Google Public DNS (8.8.8.8, 8.8.4.4)。
 
@@ -745,14 +739,14 @@ REG ADD HKLM\SYSTEM\CurrentControlSet\Services\RasMan\Parameters /v NegotiateDH2
 
 ### 其它已知问题
 
-1. Windows 自带的 VPN 客户端可能不支持 IKEv2 fragmentation（该功能[需要](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-ikee/74df968a-7125-431d-9c98-4ea929e548dc) Windows 10 v1803 或更新版本）。在有些网络上，这可能会导致连接错误或其它连接问题。你可以尝试换用 [IPsec/L2TP](clients-zh.md) 或 [IPsec/XAuth](clients-xauth-zh.md) 模式。
-1. 如果你使用 strongSwan Android VPN 客户端，则必须将服务器上的 Libreswan [升级](../README-zh.md#升级libreswan)到版本 3.26 或以上。
+1. Windows 自带的 VPN 客户端可能不支持 IKEv2 fragmentation（该功能[需要](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-ikee/74df968a-7125-431d-9c98-4ea929e548dc) Windows 10 v1803 或更新版本）。在有些网络上，这可能会导致连接错误或其它连接问题。你可以尝试换用 IPsec/L2TP(clients-zh.md) 或 IPsec/XAuth (clients-xauth-zh.md) 模式。
+1. 如果你使用 strongSwan Android VPN 客户端，则必须将服务器上的 Libreswan 升级(../README-zh.md#升级libreswan)到版本 3.26 或以上。
 
 ## 更改 IKEv2 服务器地址
 
 在某些情况下，你可能需要在配置之后更改 IKEv2 服务器地址。例如切换为使用域名，或者在服务器的 IP 更改之后。请注意，你在 VPN 客户端指定的服务器地址必须与 IKEv2 辅助脚本输出中的服务器地址 **完全一致**，否则客户端可能无法连接。
 
-要更改服务器地址，运行这个 [辅助脚本](../extras/ikev2changeaddr.sh) 并按提示操作。
+要更改服务器地址，运行这个 辅助脚本(../extras/ikev2changeaddr.sh) 并按提示操作。
 
 ```bash
 # 下载脚本
@@ -774,7 +768,7 @@ chmod +x /opt/src/ikev2.sh && ln -s /opt/src/ikev2.sh /usr/bin 2>/dev/null
 
 ## 手动配置 IKEv2
 
-除了使用 [辅助脚本](#使用辅助脚本配置-ikev2) 之外，高级用户也可以手动在 VPN 服务器上配置 IKEv2。在继续之前，推荐 [升级 Libreswan](../README-zh.md#升级libreswan) 到最新版本。
+除了使用 [辅助脚本](#使用辅助脚本配置-ikev2) 之外，高级用户也可以手动在 VPN 服务器上配置 IKEv2。在继续之前，推荐 升级 Libreswan(../README-zh.md#升级libreswan) 到最新版本。
 
 下面举例说明如何手动在 Libreswan 上配置 IKEv2。以下命令必须用 `root` 账户运行。
 
@@ -985,7 +979,7 @@ chmod +x /opt/src/ikev2.sh && ln -s /opt/src/ikev2.sh /usr/bin 2>/dev/null
 
 ## 移除 IKEv2
 
-如果你想要从 VPN 服务器移除 IKEv2，但是保留 [IPsec/L2TP](clients-zh.md) 和 [IPsec/XAuth ("Cisco IPsec")](clients-xauth-zh.md) 模式（如果已安装），可以运行辅助脚本。**警告：** 这将**永久删除**所有的 IKEv2 配置（包括证书和密钥），并且**不可撤销**！
+如果你想要从 VPN 服务器移除 IKEv2，但是保留 IPsec/L2TP(clients-zh.md) 和 IPsec/XAuth ("Cisco IPsec") (clients-xauth-zh.md) 模式（如果已安装），可以运行辅助脚本。**警告：** 这将**永久删除**所有的 IKEv2 配置（包括证书和密钥），并且**不可撤销**！
 
 ```bash
 sudo ikev2.sh --removeikev2
@@ -998,7 +992,7 @@ sudo ikev2.sh --removeikev2
 另外，你也可以手动移除 IKEv2。
 </summary>
 
-要手动从 VPN 服务器移除 IKEv2，但是保留 [IPsec/L2TP](clients-zh.md) 和 [IPsec/XAuth ("Cisco IPsec")](clients-xauth-zh.md) 模式，按照以下步骤操作。这些命令必须用 `root` 账户运行。
+要手动从 VPN 服务器移除 IKEv2，但是保留 IPsec/L2TP(clients-zh.md) 和 IPsec/XAuth ("Cisco IPsec")(clients-xauth-zh.md) 模式，按照以下步骤操作。这些命令必须用 `root` 账户运行。
 
 **警告：** 这将**永久删除**所有的 IKEv2 配置（包括证书和密钥），并且**不可撤销**！
 

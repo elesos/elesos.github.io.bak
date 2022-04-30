@@ -131,7 +131,7 @@ Add-VpnConnection -Name 'My IPsec VPN' -ServerAddress '你的 VPN 服务器 IP' 
 
 ## Android
 
-Android 12 仅支持 [IKEv2](ikev2-howto-zh.md) 模式。
+Android 12 仅支持 IKEv2(ikev2-howto-zh.md) 模式。
 
 1. 启动 **设置** 应用程序。
 1. 单击 **网络和互联网**。或者，如果你使用 Android 7 或更早版本，在 **无线和网络** 部分单击 **更多...**。
@@ -225,7 +225,7 @@ VPN 连接成功后，你可以到 [这里](https://www.ipchicken.com) 检测你
 
 ### Fedora 和 CentOS
 
-Fedora 28（和更新版本）和 CentOS 8/7 用户可以使用 [IPsec/XAuth](clients-xauth-zh.md) 模式连接。
+Fedora 28（和更新版本）和 CentOS 8/7 用户可以使用 IPsec/XAuth(clients-xauth-zh.md) 模式连接。
 
 ### 其它 Linux
 
@@ -233,9 +233,9 @@ Fedora 28（和更新版本）和 CentOS 8/7 用户可以使用 [IPsec/XAuth](cl
 
 ## 故障排除
 
-*其他语言版本: [English](clients.md#troubleshooting), [简体中文](clients-zh.md#故障排除)。如果你有意见或建议，请[发送反馈](https://bit.ly/vpn-feedback)。*
+*其他语言版本: English(clients.md#troubleshooting), 简体中文(clients-zh.md#故障排除)。如果你有意见或建议，请[发送反馈](https://bit.ly/vpn-feedback)。*
 
-**另见：** [检查日志及 VPN 状态](#检查日志及-vpn-状态)，[IKEv2 故障排除](ikev2-howto-zh.md#故障排除) 和 [高级用法](advanced-usage-zh.md)。
+**另见：** [检查日志及 VPN 状态](#检查日志及-vpn-状态)，IKEv2 故障排除(ikev2-howto-zh.md#故障排除) 和 高级用法(advanced-usage-zh.md)。
 
 * [Windows 错误 809](#windows-错误-809)
 * [Windows 错误 789 或 691](#windows-错误-789-或-691)
@@ -256,7 +256,7 @@ Fedora 28（和更新版本）和 CentOS 8/7 用户可以使用 [IPsec/XAuth](cl
 
 > 错误 809：无法建立计算机与 VPN 服务器之间的网络连接，因为远程服务器未响应。这可能是因为未将计算机与远程服务器之间的某种网络设备(如防火墙、NAT、路由器等)配置为允许 VPN 连接。请与管理员或服务提供商联系以确定哪种设备可能产生此问题。
 
-**注：** 仅当你使用 IPsec/L2TP 模式连接到 VPN 时，才需要进行下面的注册表更改。对于 [IKEv2](ikev2-howto-zh.md) 和 [IPsec/XAuth](clients-xauth-zh.md) 模式，**不需要** 进行此更改。
+**注：** 仅当你使用 IPsec/L2TP 模式连接到 VPN 时，才需要进行下面的注册表更改。对于 IKEv2(ikev2-howto-zh.md) 和 IPsec/XAuth(clients-xauth-zh.md) 模式，**不需要** 进行此更改。
 
 要解决此错误，在首次连接之前需要[修改一次注册表](https://documentation.meraki.com/MX-Z/Client_VPN/Troubleshooting_Client_VPN#Windows_Error_809)，以解决 VPN 服务器 和/或 客户端与 NAT （比如家用路由器）的兼容问题。请下载并导入下面的 `.reg` 文件，或者打开 [提升权限命令提示符](http://www.cnblogs.com/xxcanghai/p/4610054.html) 并运行以下命令。**完成后必须重启计算机。**
 
@@ -373,14 +373,14 @@ OS X (macOS) 用户： 如果可以成功地使用 IPsec/L2TP 模式连接，但
 
 为了节约电池，iOS 设备 (iPhone/iPad) 在屏幕变黑（睡眠模式）之后不久就会自动断开 Wi-Fi 连接。这会导致 IPsec VPN 断开。该行为是被 [故意设计的](https://discussions.apple.com/thread/2333948) 并且不能被配置。
 
-如果需要 VPN 在设备唤醒后自动重连，你可以使用 [IKEv2](ikev2-howto-zh.md) 模式连接（推荐）并启用 "VPN On Demand" 功能。或者你也可以另外尝试使用 [OpenVPN](https://github.com/Nyr/openvpn-install)，它支持 [一些选项](https://openvpn.net/vpn-server-resources/faq-regarding-openvpn-connect-ios/) 比如 "Reconnect on Wakeup" 和 "Seamless Tunnel"。
+如果需要 VPN 在设备唤醒后自动重连，你可以使用 IKEv2(ikev2-howto-zh.md) 模式连接（推荐）并启用 "VPN On Demand" 功能。或者你也可以另外尝试使用 [OpenVPN](https://github.com/Nyr/openvpn-install)，它支持 [一些选项](https://openvpn.net/vpn-server-resources/faq-regarding-openvpn-connect-ios/) 比如 "Reconnect on Wakeup" 和 "Seamless Tunnel"。
 
 <a name="debian-10-内核"></a>
 Android 设备在进入睡眠模式不久后也会断开 Wi-Fi 连接，如果你没有启用选项 "睡眠期间保持 WLAN 开启" 的话。该选项在 Android 8 (Oreo) 和更新版本中不再可用。另外，你也可以尝试打开 "始终开启 VPN" 选项以保持连接。详情请看 [这里](https://support.google.com/android/answer/9089766?hl=zh-Hans)。
 
 ### Debian 11/10 内核
 
-Debian 11 或者 10 用户：运行 `uname -r` 检查你的服务器的 Linux 内核版本。如果它包含 `cloud` 字样，并且 `/dev/ppp` 不存在，则该内核缺少 `ppp` 支持从而不能使用 IPsec/L2TP 模式。VPN 安装脚本会尝试检测此情形并显示警告。在这种情况下，你可以另外使用 [IKEv2](ikev2-howto-zh.md) 或者 [IPsec/XAuth](clients-xauth-zh.md) 模式连接到 VPN。
+Debian 11 或者 10 用户：运行 `uname -r` 检查你的服务器的 Linux 内核版本。如果它包含 `cloud` 字样，并且 `/dev/ppp` 不存在，则该内核缺少 `ppp` 支持从而不能使用 IPsec/L2TP 模式。VPN 安装脚本会尝试检测此情形并显示警告。在这种情况下，你可以另外使用 IKEv2(ikev2-howto-zh.md) 或者 IPsec/XAuth(clients-xauth-zh.md) 模式连接到 VPN。
 
 要解决 IPsec/L2TP 模式的问题，你可以换用标准的 Linux 内核，通过安装比如 `linux-image-amd64` 软件包来实现。然后更新 GRUB 的内核默认值并重启服务器。
 
@@ -437,7 +437,7 @@ ipsec trafficstatus
 
 ## 使用命令行配置 Linux VPN 客户端
 
-在成功 [搭建自己的 VPN 服务器](../README-zh.md) 之后，按照下面的步骤来使用命令行配置 Linux VPN 客户端。另外，你也可以使用 [IKEv2](ikev2-howto-zh.md) 模式连接（推荐），或者 [使用图形界面配置](#linux) 。以下步骤是基于 [Peter Sanford 的工作](https://gist.github.com/psanford/42c550a1a6ad3cb70b13e4aaa94ddb1c)。这些命令必须在你的 VPN 客户端上使用 `root` 账户运行。
+另外，你也可以使用 IKEv2 模式连接（推荐），以下步骤是基于 [Peter Sanford 的工作](https://gist.github.com/psanford/42c550a1a6ad3cb70b13e4aaa94ddb1c)。这些命令必须在你的 VPN 客户端上使用 `root` 账户运行。
 
 要配置 VPN 客户端，首先安装以下软件包：
 
