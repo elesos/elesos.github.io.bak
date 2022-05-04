@@ -6,6 +6,6 @@ categories: [艺搜软件]
 tags: [艺搜软件]
 ---
 
-[https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo?utm_source=chrome-app-launcher-info-dialog](鼠标手势)
+鼠标手势 https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo?utm_source=chrome-app-launcher-info-dialog 
 
-[https://chrome.google.com/webstore/detail/undoclosetab/agoafanmgjplfjeiabopkembipjbpnac?utm_source=chrome-app-launcher-info-dialog](UndoCloseTab重新打开关闭的标签页)
+UndoCloseTab重新打开关闭的标签页 https://chrome.google.com/webstore/detail/undoclosetab/agoafanmgjplfjeiabopkembipjbpnac?utm_source=chrome-app-launcher-info-dialog 
