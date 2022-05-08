@@ -7,7 +7,7 @@ tags: [FFmpeg]
 ---
 https://typora.io/#windows
 
-好像开始收费了。
+好像开始收费了。0.9.98_beta 不收费，https://download.typora.io/windows/typora-update-x64-1213.exe
 
 可以试试Notion
 ## 参考
