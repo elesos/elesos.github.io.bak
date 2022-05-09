@@ -2,8 +2,8 @@
 layout: post
 title: Discuz  Q 建站小结
 date: 2022-05-02 05:30:00 +0800
-categories: [Discuz]
-tags: [Discuz]
+categories: [discuz]
+tags: [discuz]
 ---
 官网https://discuz.com/
 
