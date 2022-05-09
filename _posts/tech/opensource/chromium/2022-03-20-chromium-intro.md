@@ -10,7 +10,10 @@ https://www.chromium.org/Home/
 
 https://www.chromium.org/developers/
 
+Linux is required for building Android, and a Mac is required for building iOS.
 
+https://chromium.googlesource.com/chromium/src
 
+https://github.com/chromium/chromium
 
 
