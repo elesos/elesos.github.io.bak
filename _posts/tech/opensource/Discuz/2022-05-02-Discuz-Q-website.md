@@ -16,8 +16,9 @@ tags: [discuz]
 最新包可以通过 https://dl.discuz.chat/dzq_latest_install.zip 下载
 
 ## 安装
-访问 http://<站点域名>/dl.php ，如果是git上传的源码，有可能.gitignore文件里面忽略了vendor文件夹。会导致安装失败。
-
+```
+访问 http://站点域名//dl.php ，如果是git上传的源码，有可能.gitignore文件里面忽略了vendor文件夹。会导致安装失败。
+```
 升级也是访问dl.php，要先删除lock文件,如果无法解压，chown apache.apache -R dzq
 
 安装成功后，需要先在服务器上提交，然后才能在本地提交，不然可能有冲突。
