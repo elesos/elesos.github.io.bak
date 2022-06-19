@@ -2,8 +2,8 @@
 layout: post
 title: WebRTC 架构
 date: 2022-04-08 23:30:00 +0800
-categories: [WebRTC]
-tags: [WebRTC]
+categories: [webrtc]
+tags: [webrtc]
 ---
 
 https://webrtc.github.io/webrtc-org/architecture/

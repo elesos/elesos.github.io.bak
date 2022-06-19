@@ -2,8 +2,8 @@
 layout: post
 title: Linux 搭建 SVN 服务器
 date: 2022-04-12 23:30:00 +0800
-categories: [Linux操作]
-tags: [Linux操作]
+categories: [linux操作]
+tags: [linux操作]
 ---
 
 svn不仅可以用于程序开发，还可以做很多事情，如备份文档

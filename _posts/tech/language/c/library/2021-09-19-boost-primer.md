@@ -3,7 +3,7 @@ layout: post
 title: Boost简明教程
 date: 2021-09-19 17:15:14 +0800
 categories: [艺搜科技,编程]
-tags: [C/C++]
+tags: [c++]
 ---
 
 

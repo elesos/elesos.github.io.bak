@@ -2,8 +2,8 @@
 layout: post
 title: MySQL 常见错误
 date: 2022-04-30 05:30:00 +0800
-categories: [MySQL]
-tags: [MySQL]
+categories: [mysql]
+tags: [mysql]
 ---
 * Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes
 多字节字符集的大字段上创建索引时，超出索引字节的限制，如utf8mb4是4字节字符集，默认支持的索引字段最大长度是191字符（767字节/4字节每字符≈191字符），因此在varchar(255)或char(255)类型字段上创建索引会失败。

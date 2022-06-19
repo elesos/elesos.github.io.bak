@@ -2,8 +2,8 @@
 layout: post
 title: Python 2.6 升级2.7
 date: 2022-04-30 05:30:00 +0800
-categories: [Python]
-tags: [Python]
+categories: [python]
+tags: [python]
 ---
 ```
 python  -V

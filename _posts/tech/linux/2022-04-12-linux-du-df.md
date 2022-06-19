@@ -2,8 +2,8 @@
 layout: post
 title: Linux du df查看磁盘或文件夹的占用空间与容量
 date: 2022-04-12 23:30:00 +0800
-categories: [Linux命令]
-tags: [Linux命令]
+categories: [linux命令]
+tags: [linux命令]
 ---
 
 ## df

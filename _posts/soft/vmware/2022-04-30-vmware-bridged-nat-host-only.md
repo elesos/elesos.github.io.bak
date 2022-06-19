@@ -2,8 +2,8 @@
 layout: post
 title: VMware网络连接模式bridged NAT host-only
 date: 2022-04-30 05:30:00 +0800
-categories: [VMware]
-tags: [VMware]
+categories: [vmware]
+tags: [vmware]
 ---
 VMware在安装时默认安装了两块虚拟网卡，VMnet1和VMnet8，另外还有VMnet0。这些虚拟网卡的配置都是由Vmware虚拟机自动生成的，一般不需要用户自行设置。
 

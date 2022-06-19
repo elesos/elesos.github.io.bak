@@ -2,8 +2,8 @@
 layout: post
 title: Nginx配置HTTPS
 date: 2022-04-30 05:30:00 +0800
-categories: [Nginx]
-tags: [Nginx]
+categories: [nginx]
+tags: [nginx]
 ---
 超文本传输安全协议,是一种基于SSL/TLS的HTTP,默认端口443
 

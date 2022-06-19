@@ -2,8 +2,8 @@
 layout: post
 title: Laravel 安装
 date: 2022-04-30 05:30:00 +0800
-categories: [Laravel]
-tags: [Laravel]
+categories: [laravel]
+tags: [laravel]
 ---
 Laravel 使用Composer 来管理自身的依赖包。因此，在使用 Laravel 之前，请确保安装了 Composer 。参考Composer 安装
 

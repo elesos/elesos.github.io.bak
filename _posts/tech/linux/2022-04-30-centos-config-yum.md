@@ -2,8 +2,8 @@
 layout: post
 title: CentOS 配置Yum源
 date: 2022-04-30 05:30:00 +0800
-categories: [Linux]
-tags: [Linux]
+categories: [linux]
+tags: [linux]
 ---
 注意:先下载wget再通过mv备份:
 

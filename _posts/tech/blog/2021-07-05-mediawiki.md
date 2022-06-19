@@ -2,8 +2,8 @@
 layout: post
 title: MediaWiki常用操作
 date: 2021-07-05 23:48:33.000000000 +09:00
-categories: [MediaWiki]
-tags: [MediaWiki]
+categories: [mediawiki]
+tags: [mediawiki]
 ---
 
 # 修改站点通知

@@ -2,8 +2,8 @@
 layout: post
 title: Qt 媒体播放器
 date: 2022-04-20 05:30:00 +0800
-categories: [Qt]
-tags: [Qt]
+categories: [qt]
+tags: [qt]
 ---
 https://doc.qt.io/qt-5/qtmultimedia-multimediawidgets-player-example.html
 

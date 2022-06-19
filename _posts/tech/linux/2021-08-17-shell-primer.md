@@ -3,7 +3,7 @@ layout: post
 title: Shell简明教程
 date: 2021-08-17 13:37:33 +0800
 categories: [艺搜科技,编程]
-tags: [Shell]
+tags: [shell]
 ---
 
 ## 逻辑运算符

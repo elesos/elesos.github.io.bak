@@ -2,8 +2,8 @@
 layout: post
 title: Use vs or mingw生成 libraries
 date: 2022-05-02 05:30:00 +0800
-categories: [C]
-tags: [C]
+categories: [c]
+tags: [c]
 ---
 It means that the .a static library is incompatible with MS C++ Linker.
 

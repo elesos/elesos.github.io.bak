@@ -2,8 +2,8 @@
 layout: post
 title: Git 获取某个目录的提交版本号
 date: 2022-04-07 23:30:00 +0800
-categories: [Git]
-tags: [Git]
+categories: [git]
+tags: [git]
 ---
 
 version=$(git log -1 --pretty=format:%h "$repo_dir/Resource")

@@ -2,8 +2,8 @@
 layout: post
 title: How to read zip file directly in Python
 date: 2022-04-30 05:30:00 +0800
-categories: [Python]
-tags: [Python]
+categories: [python]
+tags: [python]
 ---
 zip文件名可以任意 my_b_package.1.2.3.zip
 

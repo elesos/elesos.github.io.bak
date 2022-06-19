@@ -2,8 +2,8 @@
 layout: post
 title: Android SDK安装
 date: 2022-04-04 23:30:00 +0800
-categories: [Android]
-tags: [Android]
+categories: [android]
+tags: [android]
 ---
 
 ```

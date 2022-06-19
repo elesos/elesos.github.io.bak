@@ -2,8 +2,8 @@
 layout: post
 title: Curl 源码编译
 date: 2021-07-02 21:09:41 +0800
-categories: [艺搜科技,第三方库]
-tags: [第三方库]
+categories: [艺搜科技,c库]
+tags: [c库]
 ---
 
 先编译openssl

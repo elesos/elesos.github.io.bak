@@ -2,8 +2,8 @@
 layout: post
 title: Linux 常见开发问题
 date: 2022-04-30 05:30:00 +0800
-categories: [Linux]
-tags: [Linux]
+categories: [linux]
+tags: [linux]
 ---
 * /lib/ld-linux.so.2: bad ELF interpreter: 没有那个文件或目录
 可能是因为64位系统中安装了32位程序，解决方法：

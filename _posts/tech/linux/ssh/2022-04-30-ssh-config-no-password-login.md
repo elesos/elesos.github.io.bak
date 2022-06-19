@@ -2,8 +2,8 @@
 layout: post
 title: SSH配置免密登录
 date: 2022-04-30 05:30:00 +0800
-categories: [SSH]
-tags: [SSH]
+categories: [ssh]
+tags: [ssh]
 ---
 * authorized_keys文件的作用是什么？
 用来做SSH免密码登录的，在客户端生成一个公钥和私钥，然后将公钥传至Linux服务端，保存到authorized_keys文件，这样，客户端在SSH远程登录的时候，就不需要输入密码验证了。

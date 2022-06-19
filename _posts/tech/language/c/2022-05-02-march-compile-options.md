@@ -2,8 +2,8 @@
 layout: post
 title: March 选项 跨平台编译选项
 date: 2022-05-02 05:30:00 +0800
-categories: [C]
-tags: [C]
+categories: [c]
+tags: [c]
 ---
 常用的 march 选项
 

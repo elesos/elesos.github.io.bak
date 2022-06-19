@@ -3,7 +3,7 @@ layout: post
 title: 《Qt creator快速入门》 示例解析
 date: 2021-07-26 11:21:13 +0800
 categories: [艺搜科技,编程]
-tags: [Qt]
+tags: [qt]
 ---
 2.2.2
 

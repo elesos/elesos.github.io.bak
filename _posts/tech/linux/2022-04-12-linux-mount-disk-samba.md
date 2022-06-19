@@ -2,8 +2,8 @@
 layout: post
 title: Linux 挂载 Windows上的硬盘
 date: 2022-04-12 23:30:00 +0800
-categories: [Linux操作]
-tags: [Linux操作]
+categories: [linux操作]
+tags: [linux操作]
 ---
 
 ## Windows

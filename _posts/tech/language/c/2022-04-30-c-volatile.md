@@ -2,8 +2,8 @@
 layout: post
 title: C语言中volatile关键字的作用
 date: 2022-04-30 05:30:00 +0800
-categories: [C]
-tags: [C]
+categories: [c]
+tags: [c]
 ---
 volatile:禁止优化
 

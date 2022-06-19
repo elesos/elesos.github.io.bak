@@ -2,8 +2,8 @@
 layout: post
 title: Node.js与npm安装
 date: 2022-04-30 05:30:00 +0800
-categories: [Node.js]
-tags: [Node.js]
+categories: [nodejs]
+tags: [nodejs]
 ---
 配置：package.json file
 

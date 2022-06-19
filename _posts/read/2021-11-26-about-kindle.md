@@ -3,7 +3,7 @@ layout: post
 title: 关于Kindle
 date: 2021-11-26 23:30:00 +0800
 categories: [艺搜]
-tags: [Kindle]
+tags: [kindle]
 ---
 # 亚马逊Kindle
 

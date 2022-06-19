@@ -3,7 +3,7 @@ layout: post
 title: app store 申请订阅退款
 date: 2021-07-08 08:00:20    +0800
 categories: [艺搜科技,编程]
-tags: [iOS]
+tags: [ios]
 ---
 
 https://reportaproblem.apple.com/

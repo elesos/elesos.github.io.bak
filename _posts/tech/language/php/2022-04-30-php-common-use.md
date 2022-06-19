@@ -2,8 +2,8 @@
 layout: post
 title: PHP 常用操作
 date: 2022-04-30 05:30:00 +0800
-categories: [PHP]
-tags: [PHP]
+categories: [php]
+tags: [php]
 ---
 ## 调试
 pdo错误：

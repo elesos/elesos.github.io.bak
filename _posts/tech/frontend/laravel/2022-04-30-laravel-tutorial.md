@@ -2,8 +2,8 @@
 layout: post
 title: Laravel 快速上手
 date: 2022-04-30 05:30:00 +0800
-categories: [Laravel]
-tags: [Laravel]
+categories: [laravel]
+tags: [laravel]
 ---
 路由：routes/web.php
 

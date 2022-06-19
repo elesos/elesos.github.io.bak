@@ -3,7 +3,7 @@ layout: post
 title: Linux 压缩与解压命令 tar 使用介绍
 date: 2021-07-04 12:12:30 +0800
 categories: [艺搜科技,编程]
-tags: [Linux]
+tags: [linux]
 ---
 
 ## 常见压缩文件的扩展名

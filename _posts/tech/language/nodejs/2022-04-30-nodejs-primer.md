@@ -2,8 +2,8 @@
 layout: post
 title: Node.js 简明教程
 date: 2022-04-30 05:30:00 +0800
-categories: [Node.js]
-tags: [Node.js]
+categories: [nodejs]
+tags: [nodejs]
 ---
 在Node上运行的JavaScript相比其他后端开发语言有何优势？
 

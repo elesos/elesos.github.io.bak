@@ -3,7 +3,7 @@ layout: post
 title: windows 右键打开cmd
 date: 2021-08-06 13:55:03 +0800
 categories: [艺搜科技]
-tags: [windows]
+tags: [win]
 ---
 
 

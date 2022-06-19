@@ -2,8 +2,8 @@
 layout: post
 title: Linux安装Nginx
 date: 2022-04-12 23:30:00 +0800
-categories: [Nginx]
-tags: [Nginx]
+categories: [nginx]
+tags: [nginx]
 ---
 
 ## CentOS

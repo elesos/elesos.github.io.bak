@@ -2,8 +2,8 @@
 layout: post
 title: 静态编译 程序
 date: 2022-05-02 05:30:00 +0800
-categories: [C]
-tags: [C]
+categories: [c]
+tags: [c]
 ---
 yum install glibc-static
 gcc -static test.c -lccl

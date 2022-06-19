@@ -2,8 +2,8 @@
 layout: post
 title: Php 输出控制
 date: 2022-04-30 05:30:00 +0800
-categories: [PHP]
-tags: [PHP]
+categories: [php]
+tags: [php]
 ---
 当PHP有输出时，输出控制函数可以用这些来控制输出。
 

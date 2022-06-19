@@ -3,7 +3,7 @@ layout: post
 title: 源码编译Python
 date: 2021-07-03 08:33:29 +0800
 categories: [艺搜科技,编程]
-tags: [Python]
+tags: [python]
 ---
 
 注意xcode里面也有python framework

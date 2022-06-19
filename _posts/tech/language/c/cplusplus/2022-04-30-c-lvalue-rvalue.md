@@ -2,8 +2,8 @@
 layout: post
 title: C++ 到底什么是 左值 右值
 date: 2022-04-30 05:30:00 +0800
-categories: [C++]
-tags: [C++]
+categories: [c++]
+tags: [c++]
 ---
 左值 (lvalue, locator value) 表示了一个占据内存中某个可识别的位置（也就是一个地址）的对象。 可识别的内存位置
 

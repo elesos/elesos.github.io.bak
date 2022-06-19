@@ -3,7 +3,7 @@ layout: post
 title: C++常用语法手册
 date: 2021-07-02 21:17:07 +0800
 categories: [艺搜科技,编程]
-tags: [C/C++]
+tags: [c++]
 ---
 
 C++98是第一个C++标准，1998年发布。

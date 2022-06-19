@@ -2,8 +2,8 @@
 layout: post
 title: VMware 安装 CentOS
 date: 2022-04-30 05:30:00 +0800
-categories: [VMware]
-tags: [VMware]
+categories: [vmware]
+tags: [vmware]
 ---
 配置VMware
 点击“创建新的虚拟机”并且选择“自定义（高级）”

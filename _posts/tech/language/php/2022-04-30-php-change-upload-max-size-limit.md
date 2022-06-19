@@ -2,8 +2,8 @@
 layout: post
 title: PHP 如何修改文件上传大小限制
 date: 2022-04-30 05:30:00 +0800
-categories: [PHP]
-tags: [PHP]
+categories: [php]
+tags: [php]
 ---
 打开php.ini
 ```

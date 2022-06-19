@@ -2,8 +2,8 @@
 layout: post
 title: 查看 Linux 系统版本 位数
 date: 2022-04-30 05:30:00 +0800
-categories: [Linux]
-tags: [Linux]
+categories: [linux]
+tags: [linux]
 ---
 ## 查看系统信息
 ```

@@ -2,8 +2,8 @@
 layout: post
 title: Xcode 调试Qt程序时打印QString
 date: 2022-04-07 23:30:00 +0800
-categories: [Xcode]
-tags: [Xcode]
+categories: [xcode]
+tags: [xcode]
 ---
 
 home目录下新建.lldb文件夹，放入qstring.py文件 https://github.com/tgebarowski/lldb-scripts

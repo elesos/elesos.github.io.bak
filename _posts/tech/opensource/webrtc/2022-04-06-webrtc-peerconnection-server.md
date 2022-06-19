@@ -2,8 +2,8 @@
 layout: post
 title: WebRTC 源码解析之peerconnection_server
 date: 2022-04-06 23:30:00 +0800
-categories: [WebRTC]
-tags: [WebRTC]
+categories: [webrtc]
+tags: [webrtc]
 ---
 
 

@@ -2,8 +2,8 @@
 layout: post
 title: PhpMyAdmin 1440秒 登录超时
 date: 2022-04-30 05:30:00 +0800
-categories: [PHP]
-tags: [PHP]
+categories: [php]
+tags: [php]
 ---
 phpMyAdmin打开一段时间后会出现“登录超时 (1440 秒未活动)，请重新登录”的问题
 

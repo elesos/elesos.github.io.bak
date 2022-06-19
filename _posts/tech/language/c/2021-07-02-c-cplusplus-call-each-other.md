@@ -3,7 +3,7 @@ layout: post
 title: c++与其它语言的互相调用
 date: 2021-07-02 08:13:01 +0800
 categories: [艺搜科技,编程]
-tags: [C/C++]
+tags: [c++]
 ---
 
 # C++调C

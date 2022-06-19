@@ -2,8 +2,8 @@
 layout: post
 title: Python 各种扩展名 pyc  pyd 区别
 date: 2022-04-30 05:30:00 +0800
-categories: [Python]
-tags: [Python]
+categories: [python]
+tags: [python]
 ---
 pyc文件。这是python源码编译后的字节码
 ```

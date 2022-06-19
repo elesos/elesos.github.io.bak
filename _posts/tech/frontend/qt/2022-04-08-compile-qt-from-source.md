@@ -2,8 +2,8 @@
 layout: post
 title: Qt 源码编译
 date: 2022-04-08 23:30:00 +0800
-categories: [Qt]
-tags: [Qt]
+categories: [qt]
+tags: [qt]
 ---
 
 ##  支持的平台

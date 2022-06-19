@@ -2,8 +2,8 @@
 layout: post
 title: xcode常见错误
 date: 2022-05-02 05:30:00 +0800
-categories: [C]
-tags: [C]
+categories: [c]
+tags: [c]
 ---
 * Xcode UTF-16 (LE) byte order mark detected in but encoding is not supported
 ```

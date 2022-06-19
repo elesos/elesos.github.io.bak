@@ -3,7 +3,7 @@ layout: post
 title: Swift简明教程
 date: 2021-07-04 12:00:20 +0800
 categories: [艺搜科技,编程]
-tags: [Swift]
+tags: [swift]
 ---
 
 使用自动引用计数（Automatic Reference Counting, ARC）简化内存管理。

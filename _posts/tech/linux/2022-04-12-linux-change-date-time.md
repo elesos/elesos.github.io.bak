@@ -2,8 +2,8 @@
 layout: post
 title: Linux 如何修改日期和时间
 date: 2022-04-12 23:30:00 +0800
-categories: [Linux操作]
-tags: [Linux操作]
+categories: [linux操作]
+tags: [linux操作]
 ---
 
 先设置日期

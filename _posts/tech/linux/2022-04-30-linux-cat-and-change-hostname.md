@@ -2,8 +2,8 @@
 layout: post
 title: 查看并修改Linux主机名hostname
 date: 2022-04-30 05:30:00 +0800
-categories: [Linux]
-tags: [Linux]
+categories: [linux]
+tags: [linux]
 ---
 ## 查看主机名
 hostname

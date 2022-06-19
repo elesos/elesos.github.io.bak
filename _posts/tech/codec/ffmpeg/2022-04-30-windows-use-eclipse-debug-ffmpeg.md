@@ -2,8 +2,8 @@
 layout: post
 title: 1111
 date: 2022-04-30 05:30:00 +0800
-categories: [FFmpeg]
-tags: [FFmpeg]
+categories: [ffmpeg]
+tags: [ffmpeg]
 ---
 ## 环境与软件
 win7 32位

@@ -2,8 +2,8 @@
 layout: post
 title: 查看dll是debug还是release
 date: 2022-05-02 05:30:00 +0800
-categories: [C]
-tags: [C]
+categories: [c]
+tags: [c]
 ---
 用depends工具查看：
 

@@ -2,8 +2,8 @@
 layout: post
 title: Flutter 安装
 date: 2022-05-02 05:30:00 +0800
-categories: [Flutter]
-tags: [Flutter]
+categories: [flutter]
+tags: [flutter]
 ---
 为了正常升级 Flutter 和获取 packages，你需要设置如下两个环境变量：
 

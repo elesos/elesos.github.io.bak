@@ -2,8 +2,8 @@
 layout: post
 title: 阿里云Linux系统挂载数据盘
 date: 2022-04-30 05:30:00 +0800
-categories: [Linux]
-tags: [Linux]
+categories: [linux]
+tags: [linux]
 ---
 Linux云服务器数据盘未做分区和格式化，可以根据以下步骤进行分区以及格式化。
 ## 查看数据盘

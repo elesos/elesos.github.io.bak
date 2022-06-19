@@ -2,8 +2,8 @@
 layout: post
 title: 神策SDK
 date: 2021-07-04 17:18:23 +0800
-categories: [艺搜科技,第三方库]
-tags: [第三方库]
+categories: [艺搜科技,c库]
+tags: [c库]
 ---
 
 # C++ SDK

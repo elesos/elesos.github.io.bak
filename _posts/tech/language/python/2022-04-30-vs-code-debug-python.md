@@ -2,8 +2,8 @@
 layout: post
 title: 用vs code调试python
 date: 2022-04-30 05:30:00 +0800
-categories: [Python]
-tags: [Python]
+categories: [python]
+tags: [python]
 ---
 ## Mac
 Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.

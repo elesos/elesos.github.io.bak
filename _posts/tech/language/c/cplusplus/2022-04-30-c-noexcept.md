@@ -2,8 +2,8 @@
 layout: post
 title: C++ noexcept
 date: 2022-04-30 05:30:00 +0800
-categories: [C++]
-tags: [C++]
+categories: [c++]
+tags: [c++]
 ---
 void doSomething() noexcept; // this function is non-throwing
 if an exception exits a noexcept function, std::terminate will be called.

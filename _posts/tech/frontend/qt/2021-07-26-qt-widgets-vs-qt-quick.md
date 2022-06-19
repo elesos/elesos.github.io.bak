@@ -3,7 +3,7 @@ layout: post
 title: Qt Widgets、QML、Qt Quick 的区别
 date: 2021-07-26 11:21:13 +0800
 categories: [艺搜科技,编程]
-tags: [Qt]
+tags: [qt]
 ---
 
 > QML is a user interface specification and programming language.

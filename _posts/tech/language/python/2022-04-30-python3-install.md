@@ -2,8 +2,8 @@
 layout: post
 title: Python3 安装
 date: 2022-04-30 05:30:00 +0800
-categories: [Python]
-tags: [Python]
+categories: [python]
+tags: [python]
 ---
 Python有两个版本，一个是2.x版，一个是3.x版，这两个版本是不兼容的。3.x版越来越普及。
 

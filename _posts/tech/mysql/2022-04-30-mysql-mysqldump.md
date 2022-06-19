@@ -2,8 +2,8 @@
 layout: post
 title: MySQL 导入导出
 date: 2022-04-30 05:30:00 +0800
-categories: [MySQL]
-tags: [MySQL]
+categories: [mysql]
+tags: [mysql]
 ---
 ## 导出
 不能停止服务

@@ -2,8 +2,8 @@
 layout: post
 title: VMware常见问题
 date: 2022-04-30 05:30:00 +0800
-categories: [VMware]
-tags: [VMware]
+categories: [vmware]
+tags: [vmware]
 ---
 The VMware Authorization Service is not running
 ```

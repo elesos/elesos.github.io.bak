@@ -3,7 +3,7 @@ layout: post
 title: C和C++开发常见问题
 date: 2021-07-04 10:52:49 +0800
 categories: [艺搜科技,编程]
-tags: [C/C++]
+tags: [c]
 ---
 
 - \#pragma pack(push,1)

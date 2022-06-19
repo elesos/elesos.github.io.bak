@@ -3,7 +3,7 @@ layout: post
 title: Electron 入门示例
 date: 2021-07-03 07:50:34 +0800
 categories: [艺搜科技,编程]
-tags: [Electron]
+tags: [electron]
 ---
 
 GitHub开发的，可通过JavaScript（主要还是node.js）, HTML和CSS开发跨平台的桌面软件，兼容 Mac、Windows 和 Linux，vscode就是基于electron开发的。teams也是

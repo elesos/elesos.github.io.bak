@@ -3,7 +3,7 @@ layout: post
 title: Electron如何打包
 date: 2021-07-03 08:17:04 +0800
 categories: [艺搜科技,编程]
-tags: [Electron]
+tags: [electron]
 ---
 
 打包用electron-builder，它比electron-packager有更丰富的的功能，可以生成安装程序，支持自动更新

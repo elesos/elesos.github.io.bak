@@ -2,8 +2,8 @@
 layout: post
 title: Laravel 数据库 常见问题
 date: 2022-04-30 05:30:00 +0800
-categories: [Laravel]
-tags: [Laravel]
+categories: [laravel]
+tags: [laravel]
 ---
 * 如何修改表的结构
 ```

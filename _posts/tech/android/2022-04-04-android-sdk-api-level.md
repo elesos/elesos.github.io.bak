@@ -2,8 +2,8 @@
 layout: post
 title: Android SDK API level
 date: 2022-04-04 23:30:00 +0800
-categories: [Android]
-tags: [Android]
+categories: [android]
+tags: [android]
 ---
 
 http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels

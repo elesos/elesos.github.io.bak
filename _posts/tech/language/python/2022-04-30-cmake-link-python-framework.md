@@ -2,8 +2,8 @@
 layout: post
 title: Make cmake link against the correct Python framework
 date: 2022-04-30 05:30:00 +0800
-categories: [Python]
-tags: [Python]
+categories: [python]
+tags: [python]
 ---
 How can I make cmake link against the correct Python framework found in
 

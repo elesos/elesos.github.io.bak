@@ -2,8 +2,8 @@
 layout: post
 title: Markdown 编辑器
 date: 2022-04-30 05:30:00 +0800
-categories: [FFmpeg]
-tags: [FFmpeg]
+categories: [ffmpeg]
+tags: [ffmpeg]
 ---
 https://typora.io/#windows
 

@@ -2,8 +2,8 @@
 layout: post
 title: CentOS 安装 MySQL
 date: 2022-04-30 05:30:00 +0800
-categories: [MySQL]
-tags: [MySQL]
+categories: [mysql]
+tags: [mysql]
 ---
 数据库字符集最好用utf8_general_ci，用utf8mb4可能会导致索引创建失败。用bin会导致存储的中文是二进制的，无法直观查看。
 

@@ -3,7 +3,7 @@ layout: post
 title: Vue.js简明教程
 date: 2021-07-04 12:05:07 +0800
 categories: [艺搜科技,编程]
-tags: [Vue.js]
+tags: [vuejs]
 ---
 
 https://cn.vuejs.org/v2/guide/

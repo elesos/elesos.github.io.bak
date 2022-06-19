@@ -2,8 +2,8 @@
 layout: post
 title: 腾讯云 Linux 挂载数据盘
 date: 2022-04-30 05:30:00 +0800
-categories: [Linux]
-tags: [Linux]
+categories: [linux]
+tags: [linux]
 ---
 ## 查看已挂载的硬盘
 运行fdisk -l查看硬盘信息。

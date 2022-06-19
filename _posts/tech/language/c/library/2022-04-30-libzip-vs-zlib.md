@@ -2,8 +2,8 @@
 layout: post
 title: Libzip vs zlib
 date: 2022-04-30 05:30:00 +0800
-categories: [C]
-tags: [C]
+categories: [c]
+tags: [c]
 ---
 libzip is an open source library for handling zip archives. It is written in portable C and can thus be used on multiple operating systems. It is based on zlib.
 

@@ -3,7 +3,7 @@ layout: post
 title: Qt box model
 date: 2021-07-26 11:21:13 +0800
 categories: [艺搜科技,编程]
-tags: [Qt]
+tags: [qt]
 ---
 https://doc.qt.io/qt-5/stylesheet-customizing.html#the-box-model
 

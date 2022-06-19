@@ -2,8 +2,8 @@
 layout: post
 title: SDL1.x与SDL2.x的区别
 date: 2022-04-30 05:30:00 +0800
-categories: [SDL]
-tags: [SDL]
+categories: [sdl]
+tags: [sdl]
 ---
 ## SDL1
 SDL1显示YUV流程图：

@@ -3,7 +3,7 @@ layout: post
 title: 解决python中文路径问题
 date: 2021-07-01 07:58:19 +0800
 categories: [艺搜科技,编程]
-tags: [Python]
+tags: [python]
 ---
 ```
 

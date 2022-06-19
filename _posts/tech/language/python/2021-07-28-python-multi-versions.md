@@ -3,7 +3,7 @@ layout: post
 title: python虚拟环境搭建
 date: 2021-07-28 11:08:23 +0800
 categories: [艺搜科技,编程]
-tags: [Python]
+tags: [python]
 ---
 
 https://www.liaoxuefeng.com/wiki/1016959663602400/1019273143120480

@@ -2,8 +2,8 @@
 layout: post
 title: Scrapy 安装
 date: 2022-05-15 05:30:00 +0800
-categories: [Scrapy]
-tags: [Scrapy]
+categories: [scrapy]
+tags: [scrapy]
 ---
 
 需要Python 2.7或3.4及以上

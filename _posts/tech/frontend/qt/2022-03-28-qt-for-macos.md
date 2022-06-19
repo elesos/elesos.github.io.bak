@@ -2,8 +2,8 @@
 layout: post
 title: Qt for macOS 打包
 date: 2022-03-28 23:30:00 +0800
-categories: [Qt]
-tags: [Qt]
+categories: [qt]
+tags: [qt]
 ---
 
 https://doc.qt.io/qt-5/macos.html

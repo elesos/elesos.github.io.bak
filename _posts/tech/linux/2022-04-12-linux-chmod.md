@@ -2,8 +2,8 @@
 layout: post
 title: Linux chmod命令 使用手册
 date: 2022-04-12 23:30:00 +0800
-categories: [Linux命令]
-tags: [Linux命令]
+categories: [linux命令]
+tags: [linux命令]
 ---
 
 权限分别是owner/group/others三种身份各自的read/write/execute权限：

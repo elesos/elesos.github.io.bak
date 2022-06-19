@@ -3,7 +3,7 @@ layout: post
 title: socket简明教程
 date: 2021-07-04 10:44:51 +0800
 categories: [艺搜科技,编程]
-tags: [C/C++]
+tags: [c]
 ---
 
 ## 数据传输方式

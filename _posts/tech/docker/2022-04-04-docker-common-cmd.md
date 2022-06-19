@@ -2,8 +2,8 @@
 layout: post
 title: Docker 常用操作
 date: 2022-04-04 23:30:00 +0800
-categories: [Docker]
-tags: [Docker]
+categories: [docker]
+tags: [docker]
 ---
 ## 安装
 ```

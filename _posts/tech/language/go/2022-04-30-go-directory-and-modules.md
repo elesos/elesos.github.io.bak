@@ -2,8 +2,8 @@
 layout: post
 title: Go 目录结构与模块
 date: 2022-04-30 05:30:00 +0800
-categories: [Go]
-tags: [Go]
+categories: [go]
+tags: [go]
 ---
 workspace里面的src目录含有多个git repositories仓库，每个仓库又含有多个packages包，
 

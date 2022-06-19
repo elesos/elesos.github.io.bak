@@ -2,8 +2,8 @@
 layout: post
 title: Php 类的自动加载
 date: 2022-04-30 05:30:00 +0800
-categories: [PHP]
-tags: [PHP]
+categories: [php]
+tags: [php]
 ---
 通过 spl_autoload_register() 函数可以注册任意数量的自动加载器
 

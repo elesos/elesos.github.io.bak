@@ -2,8 +2,8 @@
 layout: post
 title: CentOS安装PHP
 date: 2022-04-30 05:30:00 +0800
-categories: [PHP]
-tags: [PHP]
+categories: [php]
+tags: [php]
 ---
 ## 启动
 service php-fpm start //docker里面是/usr/sbin/php-fpm &

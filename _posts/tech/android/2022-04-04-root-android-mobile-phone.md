@@ -2,8 +2,8 @@
 layout: post
 title: Android手机root
 date: 2022-04-04 23:30:00 +0800
-categories: [Android]
-tags: [Android]
+categories: [android]
+tags: [android]
 ---
 ## 红米6A
 打开USB调试：全部参数->连续点击"miui版本"一栏，直到弹出“您已进入开发者模式”

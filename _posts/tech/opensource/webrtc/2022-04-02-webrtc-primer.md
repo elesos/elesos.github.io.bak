@@ -2,8 +2,8 @@
 layout: post
 title: WebRTC 教程
 date: 2022-04-02 23:30:00 +0800
-categories: [WebRTC]
-tags: [WebRTC]
+categories: [webrtc]
+tags: [webrtc]
 ---
 
 webrtc的下载方式跟chromium差不多，也是fetch。

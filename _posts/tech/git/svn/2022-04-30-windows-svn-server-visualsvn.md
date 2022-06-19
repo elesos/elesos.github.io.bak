@@ -2,8 +2,8 @@
 layout: post
 title: Windows SVN服务器 VisualSVN
 date: 2022-04-30 05:30:00 +0800
-categories: [SVN]
-tags: [SVN]
+categories: [svn]
+tags: [svn]
 ---
 下载 https://www.visualsvn.com/server/download/
 

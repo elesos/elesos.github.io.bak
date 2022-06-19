@@ -2,8 +2,8 @@
 layout: post
 title: npm 使用手册
 date: 2022-05-02 05:30:00 +0800
-categories: [Node.js]
-tags: [Node.js]
+categories: [nodejs]
+tags: [nodejs]
 ---
 npm install  #安装，也可以写成 npm i
 npm run dev  #编译 CSS 和 JavaScript 文件 

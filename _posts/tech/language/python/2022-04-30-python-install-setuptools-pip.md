@@ -2,8 +2,8 @@
 layout: post
 title: Python setuptools 和 pip 安装
 date: 2022-04-30 05:30:00 +0800
-categories: [Python]
-tags: [Python]
+categories: [python]
+tags: [python]
 ---
 ## setuptool
 ```

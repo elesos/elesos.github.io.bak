@@ -2,8 +2,8 @@
 layout: post
 title: Go web框架gin使用手册
 date: 2022-04-30 05:30:00 +0800
-categories: [Go]
-tags: [Go]
+categories: [go]
+tags: [go]
 ---
 ```
 go get github.com/gin-gonic/gin  #go get：add dependencies to current module and install them，https://golang.google.cn/cmd/go/

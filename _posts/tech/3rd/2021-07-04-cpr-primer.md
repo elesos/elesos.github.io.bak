@@ -2,8 +2,8 @@
 layout: post
 title: cpr库简明教程
 date: 2021-07-04 10:57:28 +0800
-categories: [艺搜科技,第三方库]
-tags: [第三方库]
+categories: [艺搜科技,c++库]
+tags: [C++库]
 ---
 
 HTTP library for C++

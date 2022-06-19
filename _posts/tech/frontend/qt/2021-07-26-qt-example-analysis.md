@@ -3,7 +3,7 @@ layout: post
 title: Qt 示例解析
 date: 2021-07-26 11:21:13 +0800
 categories: [艺搜科技,编程]
-tags: [Qt]
+tags: [qt]
 ---
 基于6.2.1 官方示例
 

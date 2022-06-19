@@ -3,7 +3,7 @@ layout: post
 title: Qt和Electron的区别
 date: 2021-07-02 22:12:31 +0800
 categories: [艺搜科技,编程]
-tags: [Qt]
+tags: [qt]
 ---
 
 Qt适合一些性能要求高的桌面应用，比如你要做个类似绘声绘影的视频编辑器，那你用electron要么是没法做，要不就是体验非常烂。

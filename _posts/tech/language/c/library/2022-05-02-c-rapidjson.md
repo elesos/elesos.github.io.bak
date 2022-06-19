@@ -2,8 +2,8 @@
 layout: post
 title: Rapidjson 使用
 date: 2022-05-02 05:30:00 +0800
-categories: [C]
-tags: [C]
+categories: [c]
+tags: [c]
 ---
 https://github.com/Tencent/rapidjson
 

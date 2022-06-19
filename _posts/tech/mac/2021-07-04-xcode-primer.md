@@ -3,7 +3,7 @@ layout: post
 title: Xcode简明教程
 date: 2021-07-04 12:06:30 +0800
 categories: [艺搜科技,编程]
-tags: [Xcode]
+tags: [xcode]
 ---
 
 https://help.apple.com/xcode/mac/current/

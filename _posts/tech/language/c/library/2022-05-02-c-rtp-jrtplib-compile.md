@@ -2,8 +2,8 @@
 layout: post
 title: RTP库jrtplib编译指南
 date: 2022-05-02 05:30:00 +0800
-categories: [C]
-tags: [C]
+categories: [c]
+tags: [c]
 ---
 c++开发
 

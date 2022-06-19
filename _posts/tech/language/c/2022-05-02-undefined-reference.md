@@ -2,8 +2,8 @@
 layout: post
 title: Undefined reference 问题
 date: 2022-05-02 05:30:00 +0800
-categories: [C]
-tags: [C]
+categories: [c]
+tags: [c]
 ---
 找不到某个函数的实现文件
 

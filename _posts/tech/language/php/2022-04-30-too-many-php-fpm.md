@@ -2,8 +2,8 @@
 layout: post
 title: 解决Linux下php fpm进程过多导致内存耗尽问题
 date: 2022-04-30 05:30:00 +0800
-categories: [PHP]
-tags: [PHP]
+categories: [php]
+tags: [php]
 ---
 首先使用
 

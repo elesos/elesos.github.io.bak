@@ -2,8 +2,8 @@
 layout: post
 title: Linux 查看cpu与内存信息
 date: 2022-04-12 23:30:00 +0800
-categories: [Linux操作]
-tags: [Linux操作]
+categories: [linux操作]
+tags: [linux操作]
 ---
 
 假设cpu cores为4，physical id 有两个，core id有8个，siblings的值为8，总共有16个processor。

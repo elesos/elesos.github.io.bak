@@ -2,8 +2,8 @@
 layout: post
 title: CentOS 中文显示乱码
 date: 2022-04-30 05:30:00 +0800
-categories: [Linux]
-tags: [Linux]
+categories: [linux]
+tags: [linux]
 ---
 ## 查看
 显示正在使用的:locale

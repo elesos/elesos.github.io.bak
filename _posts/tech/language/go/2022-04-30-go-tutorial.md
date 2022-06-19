@@ -2,8 +2,8 @@
 layout: post
 title: Go语言 快速上手
 date: 2022-04-30 05:30:00 +0800
-categories: [Go]
-tags: [Go]
+categories: [go]
+tags: [go]
 ---
 2009 年开源 https://golang.google.cn/
 

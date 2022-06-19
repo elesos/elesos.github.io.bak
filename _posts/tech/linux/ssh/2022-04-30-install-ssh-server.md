@@ -2,8 +2,8 @@
 layout: post
 title: SSH 服务 安装
 date: 2022-04-30 05:30:00 +0800
-categories: [SSH]
-tags: [SSH]
+categories: [ssh]
+tags: [ssh]
 ---
 ## CentOS
 ```
