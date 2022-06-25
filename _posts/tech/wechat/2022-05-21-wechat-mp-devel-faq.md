@@ -12,4 +12,4 @@ tags: [微信开发]
 文本消息中使用文字超链接
 将a标签href属性的值用双引号引起
 
-<a href="www.elesos.com">欢迎访问</a>
+<a href="https://www.baidu.com/">欢迎访问</a>
