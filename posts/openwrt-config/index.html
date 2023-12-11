@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="zh-CN" mode="dark" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="day-prompt" content="天前"><meta name="hour-prompt" content="小时前"><meta name="minute-prompt" content="分钟前"><meta name="justnow-prompt" content="刚刚"><meta name="generator" content="Jekyll v4.2.1" /><meta property="og:title" content="OpenWRT 路由配置技巧" /><meta property="og:locale" content="zh_CN" /><meta name="description" content="https://www.williamlong.info/archives/3922.html" /><meta property="og:description" content="https://www.williamlong.info/archives/3922.html" /><link rel="canonical" href="https://elesos.github.io/posts/openwrt-config/" /><meta property="og:url" content="https://elesos.github.io/posts/openwrt-config/" /><meta property="og:site_name" content="艺搜天下" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2015-07-03T23:30:00+08:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="OpenWRT 路由配置技巧" /><meta name="twitter:site" content="@hnrayer" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"mainEntityOfPage":{"@type":"WebPage","@id":"https://elesos.github.io/posts/openwrt-config/"},"description":"https://www.williamlong.info/archives/3922.html","url":"https://elesos.github.io/posts/openwrt-config/","@type":"BlogPosting","headline":"OpenWRT 路由配置技巧","dateModified":"2015-07-03T23:30:00+08:00","datePublished":"2015-07-03T23:30:00+08:00","@context":"https://schema.org"}</script><title>OpenWRT 路由配置技巧 | 艺搜天下</title><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="艺搜天下"><meta name="application-name" content="艺搜天下"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end" lang="zh-CN"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/" alt="avatar" class="mx-auto"> </a></div><div class="site-title mt-3"> <a href="/">艺搜天下</a></div><div class="site-subtitle font-italic">知行合一 以人为镜</div></div><ul class="w-100"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>首页</span> </a><li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>分类</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i> <span>标签</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>归档</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i> <span>关于</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center"> <a href="https://github.com/starRTC" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github"></i> </a> <a href="https://twitter.com/hnrayer" aria-label="twitter" target="_blank" rel="noopener"> <i class="fab fa-twitter"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['admin','elesos.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> 首页 </a> </span> <span>OpenWRT 路由配置技巧</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> 文章</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="搜索..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >取消</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>OpenWRT 路由配置技巧</h1><div class="post-meta text-muted d-flex flex-column"><div> <span class="semi-bold"> elesos </span> 发表于 <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="2015-07-03, 23:30 +0800" >2015-07-03<i class="unloaded">2015-07-03T23:30:00+08:00</i> </span></div><div> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2091 字">11 分钟 阅读</span></div></div><div class="post-content"><p>https://www.williamlong.info/archives/3922.html</p><p>随着最近 Google 在国内已经完全无法访问，使得通过 VPN 访问网络的需求更加强烈，本文介绍的方法可以使一个普通的路由具备稳定连接 VPN 的能力，并能够自动选择国内外线路，从而得到一个既没有限制，也不会影响速度的 Wifi 环境，连接到这个网络的设备不需要任何配置即可安全上网，完全感觉不到任何不便。</p><h2 id="chnroutes-路由表">chnroutes 路由表</h2><p>这个路由表集中了所有分配到中国大陆的 IP 段，根据 http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest 每天自动更新，可使得在访问国内地址时不经过 VPN。</p><p>想想如果能够让家里的路由直接连接 VPN，在家连接 WiFi 的所有设备直接达到Fan墙的效果，应该很 Cool，所以最近在某宝整了一个 Netgear WNDR3800 二手路由回来，先后分别在 DD-WRT 和 OpenWRT 成功配置 VPN + chnroutes，最后还是选择了 OpenWRT。</p><h2 id="dd-wrt-vs-openwrt">DD-WRT vs OpenWRT</h2><p>关于 DD-WRT 和 OpenWRT，我选择 OpenWRT 主要因为 DD-WRT ROM 中集成的软件太多，绝大多数用不到，要配置 jffs2 来保存脚本文件，一般配置则保存在nvram中，而且无线较不稳定，5G频段常搜索不到（当然可能是我这个路由器型号的支持问题）。OpenWRT 的配置文件语法统一，配置都存储在文件系统中，且 ROM 本身仅集成了必备组件，非常小，可以只安装需要的东西，WEB管理界面也是可选安装，简洁强大，经过若干天的使用一直比较稳定。</p><h2 id="配置">配置</h2><p>已配置好 OpenWRT 上网的童鞋们可以直接跳过 1.刷 ROM 和 2.初始配置 　###　1.刷 ROM a.首先确定你的设备可以被 OpenWRT 所支持（到这里查看支持的设备列表：http://wiki.openwrt.org/toh/start），然后到这里下载编译好的 ROM：http://downloads.openwrt.org/ 。最新的 stable 版本是 attitude_adjustment(12.09)，我下载的是 trunk 版本。 b.在 OpenWRT 官网找相应设备的 Wiki 页面查看刷机方法，一般都是在路由器官方Web固件升级页面直接刷入（我的 WNDR3800 Wiki页面是：http://wiki.openwrt.org/toh/netgear/wndr3800） 　###　2.初始配置 a.路由器启动后，有的型号没有安装 Wifi 模块，需要先用网线连接到 LAN 口，本机 IP 配置为静态 192.168.1.x，然后 telnet 到 192.168.1.1，更改 root 密码，然后 ssh 连入，参考：http://wiki.openwrt.org/doc/start#configuring.openwrt</p><p><img data-proofer-ignore data-src="/assets/other/router/1.jpeg" alt="" /></p><p>b.配置 WAN 口，让路由连上 Internet，参考：http://wiki.openwrt.org/doc/howto/internet.connection 。 比如要配置 PPPoE：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>uci set network.wan.proto=pppoe
+uci set network.wan.username='yougotthisfromyour@isp.su'
+uci set network.wan.password='yourpassword'
+uci commit network
+ifup wan
+</pre></table></code></div></div><p>　　c.安装 LuCI Web 管理界面并设置开机自动启动，参考：http://wiki.openwrt.org/doc/howto/luci.essentials</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>opkg update
+opkg install luci
+/etc/init.d/uhttpd start
+/etc/init.d/uhttpd enable
+</pre></table></code></div></div><p>　　d.浏览器输入路由器 LAN 侧 IP（多为192.168.1.1），进行 Wifi 等配置</p><p><img data-proofer-ignore data-src="/assets/other/router/2.jpeg" alt="" /></p><p>　　3.配置 DNS a.创建 /etc/config/sec_resolv.conf vim /etc/config/sec_resolv.conf 填入以下 DNS Servers:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>nameserver 8.8.8.8
+nameserver 8.8.4.4
+nameserver 208.67.222.222
+</pre></table></code></div></div><p>　　b.编辑 /etc/config/dhcp vim /etc/config/dhcp 找到 option resolvfile 选项，替换为：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>option resolvfile '/etc/config/sec_resolv.conf'
+</pre></table></code></div></div><p>　　4.配置 PPTP a.安装 ppp-mod-pptp</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>opkg update
+opkg install ppp-mod-pptp
+</pre></table></code></div></div><p>　　如果需要 LuCI 支持（推荐）：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>opkg install luci-proto-ppp
+</pre></table></code></div></div><p>　　b.配置 vpn 接口，编辑 /etc/config/network 文件，应该已经有以下内容（如果没有，需要插入），并配置里面的 server、username 和 password：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre>        config 'interface' 'vpn' 
+        option 'ifname'    'pptp-vpn'  
+        option 'proto'     'pptp'
+        option 'username'  'vpnusername'
+        option 'password'  'vpnpassword'
+        option 'server'    'vpn.example.org or ipaddress' 
+        option 'buffering' '1' 
+</pre></table></code></div></div><p>　　c.进入 Network -&gt; Firewall ，把 vpn 加入 wan zone，效果如图：</p><p><img data-proofer-ignore data-src="/assets/other/router/3.jpeg" alt="" /></p><p>d.进入 Network -&gt; Interfaces ，此时应该已经可以看到 VPN Interface 并可以连接，效果如图：</p><p><img data-proofer-ignore data-src="/assets/other/router/4.jpeg" alt="" /></p><p>e.此时在本机 traceroute www.google.com，应该能得到类似以下的结果：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre><td class="rouge-code"><pre>$ traceroute www.google.com 
+traceroute: Warning: www.google.com has multiple addresses; using 74.125.239.113 
+traceroute to www.google.com (74.125.239.113), 64 hops max, 52 byte packets
+ 1  fc_r0.lan (192.168.7.1)  2.266 ms  0.999 ms  0.946 ms
+ 2  10.7.0.1 (10.7.0.1)  189.259 ms  187.813 ms  188.368 ms
+ 3  23.92.24.2 (23.92.24.2)  189.847 ms  190.489 ms  188.939 ms
+ 4  10ge7-6.core3.fmt2.he.net (65.49.10.217)  188.508 ms  192.216 ms  202.863 ms
+ 5  10ge10-1.core1.sjc2.he.net (184.105.222.14)  195.695 ms  195.691 ms  284.242 ms
+ 6  72.14.219.161 (72.14.219.161)  189.196 ms  192.287 ms  193.220 ms
+ 7  216.239.49.170 (216.239.49.170)  192.496 ms  188.547 ms  189.881 ms
+ 8  66.249.95.29 (66.249.95.29)  190.125 ms  190.335 ms  190.026 ms
+ 9  nuq05s01-in-f17.1e100.net (74.125.239.113)  189.804 ms  190.556 ms  190.242 ms
+</pre></table></code></div></div><p>可以看出，其中第二跳是 VPN 的网关，而 traceroute www.baidu.com 的话第二跳应该也是同样的结果。 这时已经可以访问 Google, Baidu 等国内外的站点了。 　　5.配置 chnroutes a.到 chnroutes 项目的下载页面：http://chnroutes-dl.appspot.com/ 下载 linux.zip，解压 b.把 ip-pre-up 重命名为 chnroutes.sh，打开编辑，在 if [ ! -e /tmp/vpn_oldgw ]; then 前插入以下代码，以避免 ppp 连接脚本重复执行导致重复添加路由表项：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>if [ $OLDGW == 'x.x.x.x' ]; then    exit 0
+fi
+</pre></table></code></div></div><p>其中 x.x.x.x 是 VPN 的网关，可以先本机连接上去之后查看一下网关地址。 c.ssh 连接到路由器，执行以下命令：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>cd /etc/config/
+mkdir pptp-vpn
+cd pptp-vpn
+vim chnroutes.sh
+</pre></table></code></div></div><p>在 vim 中把编辑好的 chnroutes.sh 粘贴进去（当然也可以通过 ssh 直接把 chnroutes.sh 文件传过去，或者上传到某个地方再 wget 下载） 执行以下命令，设置权限为可执行：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>chmod a+x chnroutes.sh
+</pre></table></code></div></div><p>d.用 vim 编辑 /lib/netifd/ppp-up 文件：</p><p>在 [ -d /etc/ppp/ip-up.d ] &amp;&amp; { 这一行前插入以下内容，确保 ppp 连接脚本能够被执行：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>sh /etc/config/pptp-vpn/chnroutes.sh
+</pre></table></code></div></div><p>　　e.重启路由，启动好之后，进入 LuCI 查看接口状态，等 WAN 和 VPN 都连接成功后，ssh进去，执行 route -n | head -n 10 ，效果应该类似这样：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre><td class="rouge-code"><pre># route -n | head -n 10 
+Kernel IP routing table 
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface 
+0.0.0.0         10.7.0.1      0.0.0.0         UG    0      0        0 pptp-vpn 
+1.0.1.0         58.111.43.1   255.255.255.0   UG    0      0        0 pppoe-wan 
+1.0.2.0         58.111.43.1   255.255.254.0   UG    0      0        0 pppoe-wan 
+1.0.8.0         58.111.43.1   255.255.248.0   UG    0      0        0 pppoe-wan 
+1.0.32.0        58.111.43.1   255.255.224.0   UG    0      0        0 pppoe-wan 
+1.1.0.0         58.111.43.1   255.255.255.0   UG    0      0        0 pppoe-wan 
+1.1.2.0         58.111.43.1   255.255.254.0   UG    0      0        0 pppoe-wan 
+1.1.4.0         58.111.43.1   255.255.252.0   UG    0      0        0 pppoe-wan
+</pre></table></code></div></div><p>其中 Destination 为 0.0.0.0 的是默认路由，网关为 VPN 网关，意味着默认流量都经过 VPN，而以下的条目则把目的为国内的网段都指向了 ISP 提供的网关。</p><p>至此 PPTP VPN 和 chnroutes 已经配置完毕。 　　6.配置 VPN 断线自动重连 a.创建 /etc/config/pptp-vpn/status-check.sh：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>vim /etc/config/pptp-vpn/status-check.sh
+</pre></table></code></div></div><p>在 vim 中粘贴以下内容（此脚本检测 VPN 连接状态，并在断线后会断开 WAN 和 VPN 接口，10秒后重新连接 WAN，并在 30 秒后重连 VPN）：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre><td class="rouge-code"><pre>#!/bin/sh
+if [ -f "/tmp/vpn_status_check.lock" ]
+then
+        exit 0
+fi
+VPN_CONN=`ifconfig | grep pptp-vpn`
+if [ -z "$VPN_CONN" ]
+then
+        touch /tmp/vpn_status_check.lock
+        echo WAN_VPN_RECONNECT at: &gt;&gt; /tmp/vpn_status_check_reconn.log
+        date &gt;&gt; /tmp/vpn_status_check_reconn.log
+        ifdown vpn
+        ifdown wan
+        sleep 10
+        ifup wan
+        sleep 30
+        ifdown vpn
+        sleep 10
+        ifup vpn
+        sleep 40
+        rm /tmp/vpn_status_check.lock
+else
+        date &gt; /tmp/vpn_status_check.log
+fi
+</pre></table></code></div></div><p>执行以下命令，设置权限为可执行：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>chmod a+x /etc/config/pptp-vpn/status-check.sh
+</pre></table></code></div></div><p>b.进入LuCI 的 System -&gt; Scheduled Tasks 填入以下内容，并保存：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>*/1 * * * * /etc/config/pptp-vpn/status-check.sh
+</pre></table></code></div></div><p>以上实际上是编辑了 cron 配置，cron 每分钟运行检测 / 重连脚本，重启 cron：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>/etc/init.d/cron restart
+</pre></table></code></div></div><p>　　c.静待几分钟，查看 /tmp 目录，应该能看到 vpn_oldgw 和 vpn_status_check.log 文件，查看 vpn_status_check.log 文件，可以看到最近一次检测 VPN 连接状态的时间。</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre># ls vpn*
+vpn_oldgw             vpn_status_check.log
+# cat vpn_status_check.log 
+Tue Jul 15 00:04:02 HKT 2014
+
+你可以在 LuCI 中断开 VPN 接口，在接下来的4-5分钟，观察 WAN 和 VPN 的重连情况。
+d.分别 traceroute www.google.com 和 www.baidu.com ，观察第二跳的地址：
+</pre></table></code></div></div><p>$ traceroute www.google.com | head -n 3 traceroute: Warning: www.google.com has multiple addresses; using 74.125.239.115 traceroute to www.google.com (74.125.239.115), 64 hops max, 52 byte packets 1 fc_r0.lan (192.168.7.1) 2.161 ms 0.912 ms 0.895 ms 2 10.7.0.1 (10.7.0.1) 193.747 ms 187.789 ms 289.744 ms 3 23.92.24.2 (23.92.24.2) 259.323 ms 354.625 ms 408.535 ms</p><p>$ traceroute www.baidu.com | head -n 3 traceroute to www.a.shifen.com (180.76.3.151), 64 hops max, 52 byte packets 1 fc_r0.lan (192.168.7.1) 1.190 ms 0.984 ms 0.731 ms 2 58.111.43.1 (58.111.43.1) 20.616 ms 38.822 ms 18.484 ms 3 183.56.35.133 (183.56.35.133) 20.056 ms 52.353 ms 87.841 ms ``` 可以看出，已成功对国内外的目标地址进行了路由选择。 至此，OpenWRT 路由的基本配置、PPTP VPN、chnroutes 和自动重连已经配置完成。</p></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/%E8%B7%AF%E7%94%B1%E5%99%A8/'>路由器</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/" class="post-tag no-text-decoration" >路由器</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> 本文由作者按照 <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0 </a> 进行授权</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">分享</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=OpenWRT 路由配置技巧 - 艺搜天下&url=https://elesos.github.io/posts/openwrt-config/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=OpenWRT 路由配置技巧 - 艺搜天下&u=https://elesos.github.io/posts/openwrt-config/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=OpenWRT 路由配置技巧 - 艺搜天下&url=https://elesos.github.io/posts/openwrt-config/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i id="copy-link" class="fa-fw fas fa-link small" data-toggle="tooltip" data-placement="top" title="分享链接" title-succeed="链接已复制！"> </i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>最近更新</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/use-notepad-batch-change-utf8/">使用 notepad++宏 批量替换文件编码</a><li><a href="/posts/wechat-mp-devel-faq/">微信公众号开发常见问题</a><li><a href="/posts/post-standard/">定一个博客写作标准</a><li><a href="/posts/scrapy-install/">Scrapy 安装</a><li><a href="/posts/ngrok-rpi/">Ngrok 内网穿透 树莓派</a></ul></div><div id="access-tags"> <span>热门标签</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/%E4%B9%A6%E6%91%98/">书摘</a> <a class="post-tag" href="/tags/c/">c</a> <a class="post-tag" href="/tags/python/">python</a> <a class="post-tag" href="/tags/qt/">qt</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E7%99%BE%E7%A7%91/">艺搜百科</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E8%BD%AF%E4%BB%B6/">艺搜软件</a> <a class="post-tag" href="/tags/php/">php</a> <a class="post-tag" href="/tags/c/">c++</a> <a class="post-tag" href="/tags/ffmpeg/">ffmpeg</a> <a class="post-tag" href="/tags/linux/">linux</a></div></div></div><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">文章内容</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>相关文章</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/ry-pandorabox/"><div class="card-body"> <span class="timeago small" >2015-10-24<i class="unloaded">2015-10-24T23:30:00+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>如意云路由刷PandoraBox</h3><div class="text-muted small"><p> 本文可能已过时 准备固件 http://downloads.openwrt.org.cn/PandoraBox/RY-1/ 此处用的是PandoraBox-ralink-ry1-r273-20140415.bin 艺搜下载 不要下载3M的PandoraBox-ralink-ry1-r286-20140417.bin 使用uboot刷机 拔掉路由器WAN口网线，电脑网线连接LAN口。 路由...</p></div></div></a></div><div class="card"> <a href="/posts/openwrt-linux-in-router/"><div class="card-body"> <span class="timeago small" >2016-07-20<i class="unloaded">2016-07-20T23:30:00+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>OpenWrt：路由器上的Linux</h3><div class="text-muted small"><p> 官网：https://openwrt.org/ 适用于嵌入式设备的一个Linux发行版，可用来刷路由器。 相对原厂固件而言，OpenWrt不是一个单一、静态的固件，而是提供了一个可添加软件包的可写的文件系统。 这使用户可以自由的选择应用程序和配置，而不必受设备提供商的限制，并且可以使用一些适合某方面应用的软件包来定制你的设备。 对于开发者来说，OpenWrt是一个框架，开发者不必麻烦...</p></div></div></a></div><div class="card"> <a href="/posts/Luci-intro/"><div class="card-body"> <span class="timeago small" >2016-07-20<i class="unloaded">2016-07-20T23:30:00+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>LuCI介绍</h3><div class="text-muted small"><p> 为OpenWrt固件实现快速配置接口。 Lua是一个小巧的脚本语言，很容易嵌入到其它语言中去。 UCI是OpenWrt中为实现所有系统配置的一个统一接口，英文名Unified Configuration Interface，即统一配置接口。 LuCI,即是这两个项目的合体，可以实现路由的网页配置界面。 艺搜参考 http://baike.so.com/doc/1343650.html...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <span class="btn btn-outline-primary disabled" prompt="上一篇"><p>-</p></span> <a href="/posts/ry-pandorabox/" class="btn btn-outline-primary" prompt="下一篇"><p>如意云路由刷PandoraBox</p></a></div><div class="utterances-container"> <script src="https://utteranc.es/client.js" repo="elesos/elesos.github.io" issue-term="title" label="Comment" theme="github-dark" crossorigin="anonymous" async> </script></div><script type="text/javascript"> $(function() { window.onmessage = evt => { if (evt.origin === 'https://utteranc.es') { toggle.updateCommentStyle(); window.onmessage = null; } } }); </script></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2023 <a href="https://twitter.com/hnrayer">elesos</a>. <span data-toggle="tooltip" data-placement="top" title="除非另有说明，本网站上的博客文章均由作者按照知识共享署名 4.0 国际 (CC BY 4.0) 许可协议进行授权。">保留部分权利。</span></p></div><div class="footer-right"><p class="mb-0"></p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">热门标签</h4><a class="post-tag" href="/tags/%E4%B9%A6%E6%91%98/">书摘</a> <a class="post-tag" href="/tags/c/">c</a> <a class="post-tag" href="/tags/python/">python</a> <a class="post-tag" href="/tags/qt/">qt</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E7%99%BE%E7%A7%91/">艺搜百科</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E8%BD%AF%E4%BB%B6/">艺搜软件</a> <a class="post-tag" href="/tags/php/">php</a> <a class="post-tag" href="/tags/c/">c++</a> <a class="post-tag" href="/tags/ffmpeg/">ffmpeg</a> <a class="post-tag" href="/tags/linux/">linux</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">搜索结果为空</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/clipboard@2/dist/clipboard.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.16.1,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script defer src="/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id="></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); }); </script>

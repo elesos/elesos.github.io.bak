@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-CN" mode="dark" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="day-prompt" content="天前"><meta name="hour-prompt" content="小时前"><meta name="minute-prompt" content="分钟前"><meta name="justnow-prompt" content="刚刚"><meta name="generator" content="Jekyll v4.2.1" /><meta property="og:title" content="在CentOS下编译FFmpeg" /><meta property="og:locale" content="zh_CN" /><meta name="description" content="Get the Dependencies" /><meta property="og:description" content="Get the Dependencies" /><link rel="canonical" href="https://elesos.github.io/posts/ffmpeg-compile-in-centos/" /><meta property="og:url" content="https://elesos.github.io/posts/ffmpeg-compile-in-centos/" /><meta property="og:site_name" content="艺搜天下" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2021-07-02T21:27:19+08:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="在CentOS下编译FFmpeg" /><meta name="twitter:site" content="@hnrayer" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"mainEntityOfPage":{"@type":"WebPage","@id":"https://elesos.github.io/posts/ffmpeg-compile-in-centos/"},"description":"Get the Dependencies","url":"https://elesos.github.io/posts/ffmpeg-compile-in-centos/","@type":"BlogPosting","headline":"在CentOS下编译FFmpeg","dateModified":"2021-07-02T21:27:19+08:00","datePublished":"2021-07-02T21:27:19+08:00","@context":"https://schema.org"}</script><title>在CentOS下编译FFmpeg | 艺搜天下</title><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="艺搜天下"><meta name="application-name" content="艺搜天下"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end" lang="zh-CN"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/" alt="avatar" class="mx-auto"> </a></div><div class="site-title mt-3"> <a href="/">艺搜天下</a></div><div class="site-subtitle font-italic">知行合一 以人为镜</div></div><ul class="w-100"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>首页</span> </a><li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>分类</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i> <span>标签</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>归档</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i> <span>关于</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center"> <a href="https://github.com/starRTC" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github"></i> </a> <a href="https://twitter.com/hnrayer" aria-label="twitter" target="_blank" rel="noopener"> <i class="fab fa-twitter"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['admin','elesos.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> 首页 </a> </span> <span>在CentOS下编译FFmpeg</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> 文章</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="搜索..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >取消</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>在CentOS下编译FFmpeg</h1><div class="post-meta text-muted d-flex flex-column"><div> <span class="semi-bold"> elesos </span> 发表于 <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="2021-07-02, 21:27 +0800" >2021-07-02<i class="unloaded">2021-07-02T21:27:19+08:00</i> </span></div><div> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="695 字">3 分钟 阅读</span></div></div><div class="post-content"><p>Get the Dependencies</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>yum install autoconf automake cmake freetype-devel gcc gcc-c++ git libtool make mercurial nasm pkgconfig zlib-devel bzip2  # mercurial 就是hg
+mkdir ~/ffmpeg_sources
+</pre></table></code></div></div><p>NASM</p><p>An assembler 汇编程序 used by some libraries. Highly recommended or your resulting build may be very slow.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources
+curl -O -L https://www.nasm.us/pub/nasm/releasebuilds/2.14.02/nasm-2.14.02.tar.bz2
+./autogen.sh
+./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin"
+make &amp;&amp; make install
+</pre></table></code></div></div><p>Yasm</p><p>Yasm is an assembler used by x264 and FFmpeg.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources
+git clone --depth 1 git://github.com/yasm/yasm.git
+或curl -O -L https://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
+autoreconf -fiv
+./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin"
+make &amp;&amp; make install
+make distclean
+</pre></table></code></div></div><p>libx264</p><p>H.264 video encoder.</p><p>Requires ffmpeg to be configured with –enable-gpl –enable-libx264.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources
+git clone --branch stable --depth 1 https://code.videolan.org/videolan/x264.git
+PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig"./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" --enable-static
+make &amp;&amp; make install
+make distclean
+</pre></table></code></div></div><p>libx265</p><p>H.265/HEVC video encoder.</p><p>Requires ffmpeg to be configured with –enable-gpl –enable-libx265.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources
+hg clone https://bitbucket.org/multicoreware/x265
+cd ~/ffmpeg_sources/x265/build/linux
+cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_SHARED:bool=off ../../source
+make
+make install
+</pre></table></code></div></div><p>libfdk_aac</p><p>AAC audio encoder.</p><p>Requires ffmpeg to be configured with –enable-libfdk-aac (and –enable-nonfree if you also included –enable-gpl).</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources
+git clone --depth 1 git://git.code.sf.net/p/opencore-amr/fdk-aac
+autoreconf -fiv
+./configure --prefix="$HOME/ffmpeg_build" --disable-shared
+make &amp;&amp; make install 
+make distclean
+</pre></table></code></div></div><p>libmp3lame</p><p>MP3 audio encoder.</p><p>Requires ffmpeg to be configured with –enable-libmp3lame.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources
+curl -L -O http://downloads.sourceforge.net/project/lame/lame/3.99/lame-3.99.5.tar.gz
+./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" --disable-shared --enable-nasm
+make &amp;&amp; make install
+make distclean
+</pre></table></code></div></div><p>libopus</p><p>Opus audio decoder and encoder.</p><p>Requires ffmpeg to be configured with –enable-libopus.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources
+git clone git://git.opus-codec.org/opus.git
+autoreconf -fiv
+./configure --prefix="$HOME/ffmpeg_build" --disable-shared
+make &amp;&amp; make install
+make distclean
+</pre></table></code></div></div><p>libogg</p><p>Ogg bitstream library. Required by libtheora and libvorbis.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources
+curl -O http://downloads.xiph.org/releases/ogg/libogg-1.3.2.tar.gz
+./configure --prefix="$HOME/ffmpeg_build" --disable-shared
+make &amp;&amp; make install
+make distclean
+</pre></table></code></div></div><p>libvorbis</p><p>Vorbis audio encoder. Requires libogg.</p><p>Requires ffmpeg to be configured with –enable-libvorbis.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources
+curl -O http://downloads.xiph.org/releases/vorbis/libvorbis-1.3.4.tar.gz
+LDFLAGS="-L$HOME/ffmeg_build/lib" CPPFLAGS="-I$HOME/ffmpeg_build/include" ./configure --prefix="$HOME/ffmpeg_build" --with-ogg="$HOME/ffmpeg_build" --disable-shared
+make &amp;&amp; make install
+make distclean
+</pre></table></code></div></div><p>libvpx</p><p>VP8/VP9 video encoder and decoder.</p><p>Requires ffmpeg to be configured with –enable-libvpx.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources
+git clone --depth 1 https://chromium.googlesource.com/webm/libvpx.git
+地址要改为  git clone https://github.com/webmproject/libvpx
+./configure --prefix="$HOME/ffmpeg_build" --disable-examples --disable-unit-tests --enable-vp9-highbitdepth --as=yasm
+make &amp;&amp; make install
+</pre></table></code></div></div><p>FFmpeg</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources
+git clone --depth 1 git://source.ffmpeg.org/ffmpeg
+PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./configure --prefix="$HOME/ffmpeg_build" --extra-cflags="-I$HOME/ffmpeg_build/include" --extra-ldflags="-L$HOME/ffmpeg_build/lib" --bindir="$HOME/bin" --pkg-config-flags="--static" --enable-gpl --enable-nonfree --enable-libfdk-aac --enable-libfreetype --enable-libmp3lame --enable-libopus --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265
+make &amp;&amp; make install 
+make distclean
+hash -r  //最新的是hash -d ffmpeg是什么意思？
+</pre></table></code></div></div><p>更新</p><p>Keep the ffmpeg_sources directory and all contents if you intend to update as shown below. Otherwise you can delete this directory.</p><p>Updating Development of FFmpeg is active and an occasional update can give you new features and bug fixes. First, remove the old files and then update the dependencies:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>rm -rf ~/ffmpeg_build ~/bin/{ffmpeg,ffprobe,ffserver,lame,vsyasm,x264,x265,yasm,ytasm}
+</pre></table></code></div></div><ol><li>yum install autoconf automake cmake gcc gcc-c++ git libtool make mercurial nasm pkgconfig zlib-devel</ol><p>Update Yasm</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources/yasm
+make distclean
+git pull
+</pre></table></code></div></div><p>Then run ./configure, make, and make install as shown in the Install yasm section.</p><p>Update x264</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources/x264
+make distclean
+git pull
+</pre></table></code></div></div><p>Then run ./configure, make, and make install as shown in the Install x264 section.</p><p>Update x265</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources/x265
+rm -rf ~/ffmpeg_sources/x265/build/linux/*
+hg update
+cd ~/ffmpeg_sources/x265/build/linux
+</pre></table></code></div></div><p>Then run cmake, make, and make install as shown in the Install x265 section.</p><p>Update libfdk_aac</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources/fdk_aac
+make distclean
+git pull
+</pre></table></code></div></div><p>Then run ./configure, make, and make install as shown in the Install libfdk_aac section.</p><p>Update libvpx</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources/libvpx
+make clean
+git pull
+</pre></table></code></div></div><p>Then run ./configure, make, and make install as shown in the Install libvpx section.</p><p>Update FFmpeg</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>cd ~/ffmpeg_sources/ffmpeg
+make distclean
+git pull
+</pre></table></code></div></div><p>Then run ./configure, make, and make install as shown in the Install FFmpeg section.</p><p>Reverting changes made by this guide</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>rm -rf ~/ffmpeg_build ~/ffmpeg_sources ~/bin/{ffmpeg,ffprobe,ffserver,lame,vsyasm,x264,yasm,ytasm}
+# yum erase  xxx
+hash -r
+</pre></table></code></div></div><p>参考</p><p>https://trac.ffmpeg.org/wiki/CompilationGuide/Centos</p></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/%E8%89%BA%E6%90%9C%E7%A7%91%E6%8A%80/'>艺搜科技</a>, <a href='/categories/%E5%A4%9A%E5%AA%92%E4%BD%93/'>多媒体</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/ffmpeg/" class="post-tag no-text-decoration" >ffmpeg</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> 本文由作者按照 <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0 </a> 进行授权</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">分享</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=在CentOS下编译FFmpeg - 艺搜天下&url=https://elesos.github.io/posts/ffmpeg-compile-in-centos/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=在CentOS下编译FFmpeg - 艺搜天下&u=https://elesos.github.io/posts/ffmpeg-compile-in-centos/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=在CentOS下编译FFmpeg - 艺搜天下&url=https://elesos.github.io/posts/ffmpeg-compile-in-centos/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i id="copy-link" class="fa-fw fas fa-link small" data-toggle="tooltip" data-placement="top" title="分享链接" title-succeed="链接已复制！"> </i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>最近更新</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/use-notepad-batch-change-utf8/">使用 notepad++宏 批量替换文件编码</a><li><a href="/posts/wechat-mp-devel-faq/">微信公众号开发常见问题</a><li><a href="/posts/post-standard/">定一个博客写作标准</a><li><a href="/posts/scrapy-install/">Scrapy 安装</a><li><a href="/posts/ngrok-rpi/">Ngrok 内网穿透 树莓派</a></ul></div><div id="access-tags"> <span>热门标签</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/%E4%B9%A6%E6%91%98/">书摘</a> <a class="post-tag" href="/tags/c/">c</a> <a class="post-tag" href="/tags/python/">python</a> <a class="post-tag" href="/tags/qt/">qt</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E7%99%BE%E7%A7%91/">艺搜百科</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E8%BD%AF%E4%BB%B6/">艺搜软件</a> <a class="post-tag" href="/tags/php/">php</a> <a class="post-tag" href="/tags/c/">c++</a> <a class="post-tag" href="/tags/ffmpeg/">ffmpeg</a> <a class="post-tag" href="/tags/linux/">linux</a></div></div></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>相关文章</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/ffmpeg-metadata/"><div class="card-body"> <span class="timeago small" >2021-07-02<i class="unloaded">2021-07-02T21:27:19+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>FFmpeg Metadata 处理</h3><div class="text-muted small"><p> 1 ffmpeg -i cuc_ieschool.flv -metadata title="elesos title" -metadata year="2020" out.flv //有些需要容器格式支持才能写进去，此外还有copyright，author等 可以在打开码流前指定各种参数，比如：探测时间、超时时间、最大延时、支持的协议白名单等 1 2 3 4 5 6 7 8 9 10 ...</p></div></div></a></div><div class="card"> <a href="/posts/ffmpeg-picture-scale/"><div class="card-body"> <span class="timeago small" >2021-07-02<i class="unloaded">2021-07-02T21:27:19+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>FFmpeg 调整图片宽高</h3><div class="text-muted small"><p> 如将200200裁剪到178178 1 2 ffmpeg -i 42.png -s 178x178 178.png ffmpeg -i input.png -vf scale=960:540 output.jpg //如果540写成-1，即scale=960:-1, 将会保持原始的宽高比。</p></div></div></a></div><div class="card"> <a href="/posts/ffmpeg-rpi-h264-hard-codec/"><div class="card-body"> <span class="timeago small" >2021-07-02<i class="unloaded">2021-07-02T21:27:19+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>FFmpeg 树莓派 硬编 264</h3><div class="text-muted small"><p> 编译出来后，验证编译出来的库是否支持（这个只能查编译出来的）： 1 2 3 4 5 6 7 8 9 ffmpeg -decoders | grep mmal V..... h264_mmal h264 (mmal) (codec h264) V..... mpeg2_mmal mpeg2 (mmal) (codec mpeg2video) V..... mpeg4_mmal mpeg4...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/flv-format/" class="btn btn-outline-primary" prompt="上一篇"><p>FLV格式</p></a> <a href="/posts/ffmpeg-metadata/" class="btn btn-outline-primary" prompt="下一篇"><p>FFmpeg Metadata 处理</p></a></div><div class="utterances-container"> <script src="https://utteranc.es/client.js" repo="elesos/elesos.github.io" issue-term="title" label="Comment" theme="github-dark" crossorigin="anonymous" async> </script></div><script type="text/javascript"> $(function() { window.onmessage = evt => { if (evt.origin === 'https://utteranc.es') { toggle.updateCommentStyle(); window.onmessage = null; } } }); </script></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2023 <a href="https://twitter.com/hnrayer">elesos</a>. <span data-toggle="tooltip" data-placement="top" title="除非另有说明，本网站上的博客文章均由作者按照知识共享署名 4.0 国际 (CC BY 4.0) 许可协议进行授权。">保留部分权利。</span></p></div><div class="footer-right"><p class="mb-0"></p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">热门标签</h4><a class="post-tag" href="/tags/%E4%B9%A6%E6%91%98/">书摘</a> <a class="post-tag" href="/tags/c/">c</a> <a class="post-tag" href="/tags/python/">python</a> <a class="post-tag" href="/tags/qt/">qt</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E7%99%BE%E7%A7%91/">艺搜百科</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E8%BD%AF%E4%BB%B6/">艺搜软件</a> <a class="post-tag" href="/tags/php/">php</a> <a class="post-tag" href="/tags/c/">c++</a> <a class="post-tag" href="/tags/ffmpeg/">ffmpeg</a> <a class="post-tag" href="/tags/linux/">linux</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">搜索结果为空</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/clipboard@2/dist/clipboard.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.16.1,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script defer src="/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id="></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); }); </script>

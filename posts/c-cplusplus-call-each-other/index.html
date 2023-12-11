@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="zh-CN" mode="dark" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="day-prompt" content="天前"><meta name="hour-prompt" content="小时前"><meta name="minute-prompt" content="分钟前"><meta name="justnow-prompt" content="刚刚"><meta name="generator" content="Jekyll v4.2.1" /><meta property="og:title" content="c++与其它语言的互相调用" /><meta property="og:locale" content="zh_CN" /><meta name="description" content="C++调C" /><meta property="og:description" content="C++调C" /><link rel="canonical" href="https://elesos.github.io/posts/c-cplusplus-call-each-other/" /><meta property="og:url" content="https://elesos.github.io/posts/c-cplusplus-call-each-other/" /><meta property="og:site_name" content="艺搜天下" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2021-07-02T08:13:01+08:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="c++与其它语言的互相调用" /><meta name="twitter:site" content="@hnrayer" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"mainEntityOfPage":{"@type":"WebPage","@id":"https://elesos.github.io/posts/c-cplusplus-call-each-other/"},"description":"C++调C","url":"https://elesos.github.io/posts/c-cplusplus-call-each-other/","@type":"BlogPosting","headline":"c++与其它语言的互相调用","dateModified":"2022-06-19T18:28:10+08:00","datePublished":"2021-07-02T08:13:01+08:00","@context":"https://schema.org"}</script><title>c++与其它语言的互相调用 | 艺搜天下</title><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="艺搜天下"><meta name="application-name" content="艺搜天下"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end" lang="zh-CN"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/" alt="avatar" class="mx-auto"> </a></div><div class="site-title mt-3"> <a href="/">艺搜天下</a></div><div class="site-subtitle font-italic">知行合一 以人为镜</div></div><ul class="w-100"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>首页</span> </a><li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>分类</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i> <span>标签</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>归档</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i> <span>关于</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center"> <a href="https://github.com/starRTC" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github"></i> </a> <a href="https://twitter.com/hnrayer" aria-label="twitter" target="_blank" rel="noopener"> <i class="fab fa-twitter"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['admin','elesos.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> 首页 </a> </span> <span>c++与其它语言的互相调用</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> 文章</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="搜索..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >取消</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>c++与其它语言的互相调用</h1><div class="post-meta text-muted d-flex flex-column"><div> <span class="semi-bold"> elesos </span> 发表于 <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="2021-07-02, 08:13 +0800" >2021-07-02<i class="unloaded">2021-07-02T08:13:01+08:00</i> </span></div><div> <span> 更新于 <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="2022-06-19, 18:28 +0800" >2022-06-19<i class="unloaded">2022-06-19T18:28:10+08:00</i> </span> </span> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1059 字">5 分钟 阅读</span></div></div><div class="post-content"><h1 id="c调c">C++调C</h1><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre><td class="rouge-code"><pre>#ifdef __cplusplus
+extern "C" {               // 告诉编译器下列代码要以C链接约定的模式进行链接
+#endif
+ 
+//c头文件或函数
+ 
+#ifdef __cplusplus
+}
+#endif
+</pre></table></code></div></div><h1 id="c中调用c库">C++中调用C库</h1><p>做一个C动态库：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>#include &lt;stdio.h&gt;
+void hello(){  
+ 
+}
+gcc -shared -fPIC -o libhello.so hello.c
+</pre></table></code></div></div><p>C++程序调用它：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>g++ test.cpp  -lhello
+</pre></table></code></div></div><h1 id="c中调用c库-1">C中调用C++库</h1><p>将 C++ 函数声明为extern “C”（在你的 C++ 代码里做这个声明）</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>#include &lt;iostream&gt;
+void world()
+{  
+
+  std::cout &lt;&lt; "world" &lt;&lt; std::endl;
+}
+</pre></table></code></div></div><p>编译并copy到系统库目录下:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>g++ -shared -fPIC -o libworld.so world.cpp 
+cp libworld.so /lib/
+</pre></table></code></div></div><p>做一个中间接口库，对C++库进行二次封装：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre><td class="rouge-code"><pre>// mid.cpp
+#include &lt;iostream&gt;
+void world();
+ 
+#ifdef __cplusplus
+extern "C" {  // 即使这是一个C++程序，下列这个函数的实现也要以C约定的风格！
+#endif  
+ 
+void m_world()  
+{    
+
+  world();  
+
+}
+ 
+
+#ifdef __cplusplus
+}
+#endif
+</pre></table></code></div></div><p>其中m_world为libworld库中world方法的二次封装， 编译并copy到系统库目录下:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>g++ -shared  -fPIC -o libmid.so mid.cpp -lworld
+cp libmid.so /lib/
+</pre></table></code></div></div><p>在C程序中通过链接<strong>二次接口库</strong>去调用C++库：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre><td class="rouge-code"><pre>#include &lt;stdio.h&gt;
+int main()
+{
+  m_world(); 
+  return 0;
+}
+
+gcc test.c -lmid -o test
+</pre></table></code></div></div><p>注：对于C++库中含有类的，可以在二次接口函数中生成临时对象来调用对应的功能函数。</p><p>http://www.cppblog.com/wolf/articles/77828.html</p><h1 id="c-调用-python">C++ 调用 Python</h1><p>Python 本身就是一个C库。</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>PyRun_SimpleString("print 'Hello Python!'\n");
+所有Python元素，module、function、tuple、string等等，实际上都是PyObject。C语言里操纵它们，一律使用PyObject *
+创建Python类型的变量，使用PyXXX_New可以创建类型为XXX的变量 PyTuple_New(1);
+</pre></table></code></div></div><p>环境变量：</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>export PYTHONPATH=.:$PYTHONPATH
+</pre></table></code></div></div><p>//加载模块</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>PyObject* PyImport_ImportModule(char *name)
+PyObject* PyImport_Import(PyObject *name)
+PyObject* PyString_FromString(const char*)
+</pre></table></code></div></div><p>上面两个api都是用来动态加载python模块的。区别在于前者一个使用的是C的字符串，而后者的name是一个python对象，这个python对象需要通过PyString_FromString(const char*)来生成，其值为要导入的模块名</p><p>//导入函数</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>PyObject* PyModule_GetDict( PyObject *module)
+</pre></table></code></div></div><p>可以获得Python模块中的函数列表。函数返回一个字典。字典中的关键字为函数名，值为函数的调用地址。 字典里面的值可以通过PyObject* PyDict_GetItemString( PyObject *p, const char *key) 函数来获取，其中p是PyModule_GetDict()的字典，而key则是对应的函数名</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>PyObject* PyObject_GetAttrString(PyObject *o, char *attr_name)
+</pre></table></code></div></div><p>返回模块对象中的attr_name属性或<strong>函数</strong>，相当于Python中表达式语句：o.attr_name</p><p>//调用函数相关</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>PyObject* PyObject_CallObject( PyObject *callable_object, PyObject *args)
+PyObject* PyObject_CallFunction( PyObject *callable_object, char *format, ...)
+</pre></table></code></div></div><p>使用上面两个函数可以在C程序中调用Python中的函数。callable_object为要调用的函数对象，也就是通过上述导入函数得到的函数对象，</p><p>区别在于前者使用python的tuple来传参，后者则使用类似c语言printf的风格进行传参。</p><p>如果不需要参数，那么args可能为NULL。返回成功时调用的结果，或失败时返回NULL。</p><p>相当于Python表达式 apply(callable_object, args) 或 callable_object(*args)</p><p>对数字和字符串进行转换处理，使之变成Python中相应的数据类型。 PyObject* Py_BuildValue( const char *format, …) format是要构造的参数的类型列表，函数中剩余的参数即要转换的C语言中的整型、浮点型或者字符串等。其返回值为PyObject型的指针。</p><p>PyObject* PyList_New( Py_ssize_t len)</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>   创建一个新的Python列表，len为所创建列表的长度
+</pre></table></code></div></div><p>PyObject* PyTuple_New( Py_ssize_t len)</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>   PyTuple_New()函数返回所创建的元组。
+</pre></table></code></div></div><p>PyObject* PyDict_New()</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>   PyDict_New()函数返回所创建的字典。
+</pre></table></code></div></div><p>向 Python 传递参数 使用 PyTuple_New 创建元组， PyTuple_SetItem 设置元组值</p><p>转换 Python 返回值</p><p>库里面的一些函数将返回值转换为 C++ , 例如 PyInt_AsLong，PyFloat_AsDouble， PyString_AsString 等。</p><p>还可以使用 PyArg_ParseTuple 函数来将返回值作为元组解析</p><p>把Python代码直接变成C代码 easy_install -U cython http://docs.cython.org/en/latest/index.html</p><p>https://docs.python.org/2/c-api/index.html</p><p>https://docs.python.org/2/extending/embedding.html</p><p>https://zhuanlan.zhihu.com/p/20150641</p><p>https://zhuanlan.zhihu.com/p/79896193</p><p>https://blog.csdn.net/tobacco5648/article/details/50890106</p></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/%E8%89%BA%E6%90%9C%E7%A7%91%E6%8A%80/'>艺搜科技</a>, <a href='/categories/%E7%BC%96%E7%A8%8B/'>编程</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/c/" class="post-tag no-text-decoration" >c++</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> 本文由作者按照 <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0 </a> 进行授权</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">分享</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=c++与其它语言的互相调用 - 艺搜天下&url=https://elesos.github.io/posts/c-cplusplus-call-each-other/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=c++与其它语言的互相调用 - 艺搜天下&u=https://elesos.github.io/posts/c-cplusplus-call-each-other/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=c++与其它语言的互相调用 - 艺搜天下&url=https://elesos.github.io/posts/c-cplusplus-call-each-other/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i id="copy-link" class="fa-fw fas fa-link small" data-toggle="tooltip" data-placement="top" title="分享链接" title-succeed="链接已复制！"> </i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>最近更新</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/use-notepad-batch-change-utf8/">使用 notepad++宏 批量替换文件编码</a><li><a href="/posts/wechat-mp-devel-faq/">微信公众号开发常见问题</a><li><a href="/posts/post-standard/">定一个博客写作标准</a><li><a href="/posts/scrapy-install/">Scrapy 安装</a><li><a href="/posts/ngrok-rpi/">Ngrok 内网穿透 树莓派</a></ul></div><div id="access-tags"> <span>热门标签</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/%E4%B9%A6%E6%91%98/">书摘</a> <a class="post-tag" href="/tags/c/">c</a> <a class="post-tag" href="/tags/python/">python</a> <a class="post-tag" href="/tags/qt/">qt</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E7%99%BE%E7%A7%91/">艺搜百科</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E8%BD%AF%E4%BB%B6/">艺搜软件</a> <a class="post-tag" href="/tags/php/">php</a> <a class="post-tag" href="/tags/c/">c++</a> <a class="post-tag" href="/tags/ffmpeg/">ffmpeg</a> <a class="post-tag" href="/tags/linux/">linux</a></div></div></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>相关文章</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/cplusplus-primer/"><div class="card-body"> <span class="timeago small" >2021-07-02<i class="unloaded">2021-07-02T21:17:07+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>C++常用语法手册</h3><div class="text-muted small"><p> C++98是第一个C++标准，1998年发布。 C++11，第三个C++标准，2011年 C++14，第四个C++标准，2014年 C++17，第五个C++标准，2017年 C++20 , 2020 下一代是C++23 关键字 https://www.runoob.com/w3cnote/cpp-keyword-intro.html C++库 https://en.cppre...</p></div></div></a></div><div class="card"> <a href="/posts/recommend-c-framework-and-library/"><div class="card-body"> <span class="timeago small" >2021-07-04<i class="unloaded">2021-07-04T10:30:54+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>值得推荐的C和C++框架和库</h3><div class="text-muted small"><p> 包括：标准库、Web应用框架、人工智能、数据库、图片处理、机器学习、日志、代码分析等。 标准库 C++标准库，包括了STL容器，算法和函数等。 C++ Standard Library：是一系列类和函数的集合，使用核心语言编写，也是C++ISO自身标准的一部分。 Standard Template Library：标准模板库STL C POSIX library ： P...</p></div></div></a></div><div class="card"> <a href="/posts/boost-primer/"><div class="card-body"> <span class="timeago small" >2021-09-19<i class="unloaded">2021-09-19T17:15:14+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Boost简明教程</h3><div class="text-muted small"><p> 编译 Boost.Jam（BJam）包含在知名的Boost C++ library 中，類似make 的建構工具。 bjam.exe 是老版本，b2是bjam的升级版本 vs2017 bjam.exe install –prefix=”boost_1_70_vs2017” –libdir=”boost_1_70_vs2017/lib/Win” –toolset=msvc-14.1 l...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/how-to-improve-code-quality/" class="btn btn-outline-primary" prompt="上一篇"><p>如何提高代码质量</p></a> <a href="/posts/curl-compile/" class="btn btn-outline-primary" prompt="下一篇"><p>Curl 源码编译</p></a></div><div class="utterances-container"> <script src="https://utteranc.es/client.js" repo="elesos/elesos.github.io" issue-term="title" label="Comment" theme="github-dark" crossorigin="anonymous" async> </script></div><script type="text/javascript"> $(function() { window.onmessage = evt => { if (evt.origin === 'https://utteranc.es') { toggle.updateCommentStyle(); window.onmessage = null; } } }); </script></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2023 <a href="https://twitter.com/hnrayer">elesos</a>. <span data-toggle="tooltip" data-placement="top" title="除非另有说明，本网站上的博客文章均由作者按照知识共享署名 4.0 国际 (CC BY 4.0) 许可协议进行授权。">保留部分权利。</span></p></div><div class="footer-right"><p class="mb-0"></p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">热门标签</h4><a class="post-tag" href="/tags/%E4%B9%A6%E6%91%98/">书摘</a> <a class="post-tag" href="/tags/c/">c</a> <a class="post-tag" href="/tags/python/">python</a> <a class="post-tag" href="/tags/qt/">qt</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E7%99%BE%E7%A7%91/">艺搜百科</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E8%BD%AF%E4%BB%B6/">艺搜软件</a> <a class="post-tag" href="/tags/php/">php</a> <a class="post-tag" href="/tags/c/">c++</a> <a class="post-tag" href="/tags/ffmpeg/">ffmpeg</a> <a class="post-tag" href="/tags/linux/">linux</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">搜索结果为空</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/clipboard@2/dist/clipboard.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.16.1,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script defer src="/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id="></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); }); </script>

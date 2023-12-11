@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="zh-CN" mode="dark" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="day-prompt" content="天前"><meta name="hour-prompt" content="小时前"><meta name="minute-prompt" content="分钟前"><meta name="justnow-prompt" content="刚刚"><meta name="generator" content="Jekyll v4.2.1" /><meta property="og:title" content="GN Quick Start guide" /><meta property="og:locale" content="zh_CN" /><meta name="description" content="Running GN" /><meta property="og:description" content="Running GN" /><link rel="canonical" href="https://elesos.github.io/posts/gn-quick_start/" /><meta property="og:url" content="https://elesos.github.io/posts/gn-quick_start/" /><meta property="og:site_name" content="艺搜天下" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2021-07-04T13:30:10+08:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="GN Quick Start guide" /><meta name="twitter:site" content="@hnrayer" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"mainEntityOfPage":{"@type":"WebPage","@id":"https://elesos.github.io/posts/gn-quick_start/"},"description":"Running GN","url":"https://elesos.github.io/posts/gn-quick_start/","@type":"BlogPosting","headline":"GN Quick Start guide","dateModified":"2022-01-22T21:31:50+08:00","datePublished":"2021-07-04T13:30:10+08:00","@context":"https://schema.org"}</script><title>GN Quick Start guide | 艺搜天下</title><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="艺搜天下"><meta name="application-name" content="艺搜天下"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end" lang="zh-CN"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/" alt="avatar" class="mx-auto"> </a></div><div class="site-title mt-3"> <a href="/">艺搜天下</a></div><div class="site-subtitle font-italic">知行合一 以人为镜</div></div><ul class="w-100"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>首页</span> </a><li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>分类</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i> <span>标签</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>归档</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i> <span>关于</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center"> <a href="https://github.com/starRTC" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github"></i> </a> <a href="https://twitter.com/hnrayer" aria-label="twitter" target="_blank" rel="noopener"> <i class="fab fa-twitter"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['admin','elesos.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> 首页 </a> </span> <span>GN Quick Start guide</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> 文章</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="搜索..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >取消</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>GN Quick Start guide</h1><div class="post-meta text-muted d-flex flex-column"><div> <span class="semi-bold"> elesos </span> 发表于 <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="2021-07-04, 13:30 +0800" >2021-07-04<i class="unloaded">2021-07-04T13:30:10+08:00</i> </span></div><div> <span> 更新于 <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="2022-01-22, 21:31 +0800" >2022-01-22<i class="unloaded">2022-01-22T21:31:50+08:00</i> </span> </span> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1370 字">7 分钟 阅读</span></div></div><div class="post-content"><h2 id="running-gn">Running GN</h2><p>You just run <code class="language-plaintext highlighter-rouge">gn</code> from the command line. For large projects, GN is versioned and distributed with the source checkout.</p><ul><li><p>For Chromium and Chromium-based projects, there is a script in <code class="language-plaintext highlighter-rouge">depot_tools</code>, which is presumably in your PATH, with this name. The script will find the binary in the source tree containing the current directory and run it.</p><li><p>For Fuchsia in-tree development, run <code class="language-plaintext highlighter-rouge">fx gn ...</code> which will find the right GN binary and run it with the given arguments.</p><li><p>For other projects, see your project’s documentation.</p></ul><h2 id="setting-up-a-build">Setting up a build</h2><p>Unlike some other build systems, with GN you set up your own build directories with the settings you want. This lets you maintain as many different builds in parallel as you need.</p><p>Once you set up a build directory, the Ninja files will be automatically regenerated if they’re out of date when you build in that directory so you should not have to re-run GN.</p><p>To make a build directory:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>gn gen out/my_build
+</pre></table></code></div></div><h2 id="passing-build-arguments">Passing build arguments</h2><p>Set build arguments on your build directory by running:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>gn args out/my_build
+</pre></table></code></div></div><p>This will bring up an editor. Type build args into that file like this:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>is_component_build = true
+is_debug = false
+</pre></table></code></div></div><p>The available variables will depend on your build (this example is from Chromium). You can see the list of available arguments and their default values by typing</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>gn args --list out/my_build
+</pre></table></code></div></div><p>on the command line. Note that you have to specify the build directory for this command because the available arguments can change according to the build.</p><p>Chrome developers can also read the <a href="http://www.chromium.org/developers/gn-build-configuration">Chrome-specific build configuration</a> instructions for more information.</p><h2 id="cross-compiling-to-a-target-os-or-architecture">Cross-compiling to a target OS or architecture</h2><p>Run <code class="language-plaintext highlighter-rouge">gn args out/Default</code> (substituting your build directory as needed) and add one or more of the following lines for common cross-compiling options.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>target_os = "chromeos"
+target_os = "android"
+
+target_cpu = "arm"
+target_cpu = "x86"
+target_cpu = "x64"
+</pre></table></code></div></div><p>See <a href="/posts/gn-cross_compiles/">GN cross compiles</a> for more info.</p><h2 id="step-by-step">Step-by-step</h2><h3 id="adding-a-build-file">Adding a build file</h3><p>Go to the directory <code class="language-plaintext highlighter-rouge">examples/simple_build</code>. This is the root of a minimal GN repository.</p><p>In that directory there is a <code class="language-plaintext highlighter-rouge">tutorial</code> directory. There is already a <code class="language-plaintext highlighter-rouge">tutorial.cc</code> file that’s not hooked up to the build. Create a new <code class="language-plaintext highlighter-rouge">BUILD.gn</code> file in that directory for our new target.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>executable("tutorial") {
+  sources = [
+    "tutorial.cc",
+  ]
+}
+</pre></table></code></div></div><p>Now we just need to tell the build about this new target. Open the <code class="language-plaintext highlighter-rouge">BUILD.gn</code> file in the parent (<code class="language-plaintext highlighter-rouge">simple_build</code>) directory. GN starts by loading this root file, and then loads all dependencies ourward from here, so we just need to add a reference to our new target from this file.</p><p>You could add our new target as a dependency from one of the existing targets in the <code class="language-plaintext highlighter-rouge">simple_build/BUILD.gn</code> file, but it usually doesn’t make a lot of sense to have an executable as a depdency of another executable (they can’t be linked). So let’s make a “tools” group. In GN, a “group” is just a collection of dependencies that’s not complied or linked:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre>group("tools") {
+  deps = [
+    # This will expand to the name "//tutorial:tutorial" which is the full name
+    # of our new target. Run "gn help labels" for more.
+    "//tutorial",
+  ]
+}
+</pre></table></code></div></div><h3 id="testing-your-addition">Testing your addition</h3><p>From the command line in the <code class="language-plaintext highlighter-rouge">simple_build</code> directory:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>gn gen out
+ninja -C out tutorial
+out/tutorial
+</pre></table></code></div></div><p>You should see “Hello, world.” output to the console.</p><p>Side note: GN encourages target names for static libraries that aren’t globally unique. To build one of these, you can pass the label with its path (but no leading “//”) to ninja:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>ninja -C out some/path/to/target:my_target
+</pre></table></code></div></div><h3 id="declaring-dependencies">Declaring dependencies</h3><p>Let’s look at the targets defined in ../examples/simple_build/BUILD.gn . There is a static library that defines one function, <code class="language-plaintext highlighter-rouge">GetStaticText()</code>:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>static_library("hello_static") {
+  sources = [
+    "hello_static.cc",
+    "hello_static.h",
+  ]
+}
+</pre></table></code></div></div><p>There is also a shared library that defines one function <code class="language-plaintext highlighter-rouge">GetSharedText()</code>:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre><td class="rouge-code"><pre>shared_library("hello_shared") {
+  sources = [
+    "hello_shared.cc",
+    "hello_shared.h",
+  ]
+
+  defines = [ "HELLO_SHARED_IMPLEMENTATION" ]
+}
+</pre></table></code></div></div><p>This also illustrates how to set preprocessor defines for a target. To set more than one or to assign values, use this form:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>defines = [
+  "HELLO_SHARED_IMPLEMENTATION",
+  "ENABLE_DOOM_MELON=0",
+]
+</pre></table></code></div></div><p>Now let’s look at the executable that depends on these two libraries:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre><td class="rouge-code"><pre>executable("hello") {
+  sources = [
+    "hello.cc",
+  ]
+
+  deps = [
+    ":hello_shared",
+    ":hello_static",
+  ]
+}
+</pre></table></code></div></div><p>This executable includes one source file and depends on the previous two libraries. Labels starting with a colon refer to a target with that name in the current BUILD.gn file.</p><h3 id="test-the-binary">Test the binary</h3><p>From the command line in the <code class="language-plaintext highlighter-rouge">simple_build</code> directory:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>ninja -C out hello
+out/hello
+</pre></table></code></div></div><p>Note that you <strong>didn’t</strong> need to re-run GN. GN will automatically rebuild the ninja files when any build file has changed. You know this happens when ninja prints <code class="language-plaintext highlighter-rouge">[1/1] Regenerating ninja files</code> at the beginning of execution.</p><h3 id="putting-settings-in-a-config">Putting settings in a config</h3><p>Users of a library often need compiler flags, defines, and include directories applied to them. To do this, put all such settings into a “config” which is a named collection of settings (but not sources or dependencies):</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>config("my_lib_config") {
+  defines = [ "ENABLE_DOOM_MELON" ]
+  include_dirs = [ "//third_party/something" ]
+}
+</pre></table></code></div></div><p>To apply a config’s settings to a target, add it to the <code class="language-plaintext highlighter-rouge">configs</code> list:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre>static_library("hello_shared") {
+  ...
+  # Note "+=" here is usually required, see "default configs" below.
+  configs += [
+    ":my_lib_config",
+  ]
+}
+</pre></table></code></div></div><p>A config can be applied to all targets that depend on the current one by putting its label in the <code class="language-plaintext highlighter-rouge">public_configs</code> list:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>static_library("hello_shared") {
+  ...
+  public_configs = [
+    ":my_lib_config",
+  ]
+}
+</pre></table></code></div></div><p>The <code class="language-plaintext highlighter-rouge">public_configs</code> also applies to the current target, so there’s no need to list a config in both places.</p><h3 id="default-configs">Default configs</h3><p>The build configuration will set up some settings that apply to every target by default. These will normally be set as a default list of configs. You can see this using the “print” command which is useful for debugging:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>executable("hello") {
+  print(configs)
+}
+</pre></table></code></div></div><p>Running GN will print something like:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>$ gn gen out
+["//build:compiler_defaults", "//build:executable_ldconfig"]
+Done. Made 5 targets from 5 files in 9ms
+</pre></table></code></div></div><p>Targets can modify this list to change their defaults. For example, the build setup might turn off exceptions by default by adding a <code class="language-plaintext highlighter-rouge">no_exceptions</code> config, but a target might re-enable them by replacing it with a different one:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>executable("hello") {
+  ...
+  configs -= [ "//build:no_exceptions" ]  # Remove global default.
+  configs += [ "//build:exceptions" ]  # Replace with a different one.
+}
+</pre></table></code></div></div><p>Our print command from above could also be expressed using string interpolation. This is a way to convert values to strings. It uses the symbol “$” to refer to a variable:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>print("The configs for the target $target_name are $configs")
+</pre></table></code></div></div><h2 id="add-a-new-build-argument">Add a new build argument</h2><p>You declare which arguments you accept and specify default values via <code class="language-plaintext highlighter-rouge">declare_args</code>.</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>declare_args() {
+  enable_teleporter = true
+  enable_doom_melon = false
+}
+</pre></table></code></div></div><p>See <code class="language-plaintext highlighter-rouge">gn help buildargs</code> for an overview of how this works. See <code class="language-plaintext highlighter-rouge">gn help declare_args</code> for specifics on declaring them.</p><p>It is an error to declare a given argument more than once in a given scope, so care should be used in scoping and naming arguments.</p><h2 id="dont-know-whats-going-on">Don’t know what’s going on?</h2><p>You can run GN in verbose mode to see lots of messages about what it’s doing. Use <code class="language-plaintext highlighter-rouge">-v</code> for this.</p><h3 id="the-desc-command">The “desc” command</h3><p>You can run <code class="language-plaintext highlighter-rouge">gn desc &lt;build_dir&gt; &lt;targetname&gt;</code> to get information about a given target:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>gn desc out/Default //foo/bar:say_hello
+</pre></table></code></div></div><p>will print out lots of exciting information. You can also print just one section. Lets say you wanted to know where your <code class="language-plaintext highlighter-rouge">TWO_PEOPLE</code> define came from on the <code class="language-plaintext highlighter-rouge">say_hello</code> target:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>&gt; gn desc out/Default //foo/bar:say_hello defines --blame
+...lots of other stuff omitted...
+  From //foo/bar:hello_config
+       (Added by //foo/bar/BUILD.gn:12)
+    TWO_PEOPLE
+</pre></table></code></div></div><p>Another particularly interesting variation:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span text-data=" Plaintext "><i class="fa-fw fas fa-code small"></i></span> <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>gn desc out/Default //base:base_i18n deps --tree
+</pre></table></code></div></div><p>See <code class="language-plaintext highlighter-rouge">gn help desc</code> for more.</p></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/%E8%89%BA%E6%90%9C%E6%96%87%E6%A1%A3/'>艺搜文档</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/gn/" class="post-tag no-text-decoration" >gn</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> 本文由作者按照 <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0 </a> 进行授权</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">分享</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=GN Quick Start guide - 艺搜天下&url=https://elesos.github.io/posts/gn-quick_start/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=GN Quick Start guide - 艺搜天下&u=https://elesos.github.io/posts/gn-quick_start/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=GN Quick Start guide - 艺搜天下&url=https://elesos.github.io/posts/gn-quick_start/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i id="copy-link" class="fa-fw fas fa-link small" data-toggle="tooltip" data-placement="top" title="分享链接" title-succeed="链接已复制！"> </i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>最近更新</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/use-notepad-batch-change-utf8/">使用 notepad++宏 批量替换文件编码</a><li><a href="/posts/wechat-mp-devel-faq/">微信公众号开发常见问题</a><li><a href="/posts/post-standard/">定一个博客写作标准</a><li><a href="/posts/scrapy-install/">Scrapy 安装</a><li><a href="/posts/ngrok-rpi/">Ngrok 内网穿透 树莓派</a></ul></div><div id="access-tags"> <span>热门标签</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/%E4%B9%A6%E6%91%98/">书摘</a> <a class="post-tag" href="/tags/c/">c</a> <a class="post-tag" href="/tags/python/">python</a> <a class="post-tag" href="/tags/qt/">qt</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E7%99%BE%E7%A7%91/">艺搜百科</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E8%BD%AF%E4%BB%B6/">艺搜软件</a> <a class="post-tag" href="/tags/php/">php</a> <a class="post-tag" href="/tags/c/">c++</a> <a class="post-tag" href="/tags/ffmpeg/">ffmpeg</a> <a class="post-tag" href="/tags/linux/">linux</a></div></div></div><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">文章内容</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>相关文章</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/gn-primer/"><div class="card-body"> <span class="timeago small" >2021-07-04<i class="unloaded">2021-07-04T13:30:10+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Google gn简明教程</h3><div class="text-muted small"><p> https://gn.googlesource.com/gn/ generates build files for Ninja. 重要文件 .gn : Defines root of GN build tree 共享的变量放在gni文件中，通过 import导入 查有哪些targets 1 2 gn ls out/Default “//base/*” 查看可用参数列表及其默...</p></div></div></a></div><div class="card"> <a href="/posts/gn-intro/"><div class="card-body"> <span class="timeago small" >2022-04-01<i class="unloaded">2022-04-01T23:30:00+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>工欲善其事，必先利其器之gn使用</h3><div class="text-muted small"><p> https://chromium.googlesource.com/chromium/src/tools/gn/+/48062805e19b4697c5fbd926dc649c78b6aaa138/docs/quick_start.md https://chromium.googlesource.com/chromium/src/tools/gn/+/48062805e19b4697c5f...</p></div></div></a></div><div class="card"> <a href="/posts/gn-cross_compiles/"><div class="card-body"> <span class="timeago small" >2021-07-04<i class="unloaded">2021-07-04T13:30:10+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>How GN handles cross-compiling</h3><div class="text-muted small"><p> As a GN user GN has robust support for doing cross compiles and building things for multiple architectures in a single build (e.g., to build some things to run locally and some things to run on an...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/gn-language/" class="btn btn-outline-primary" prompt="上一篇"><p>GN Language and Operation 介绍</p></a> <a href="/posts/gn-reference/" class="btn btn-outline-primary" prompt="下一篇"><p>GN Reference 参考手册</p></a></div><div class="utterances-container"> <script src="https://utteranc.es/client.js" repo="elesos/elesos.github.io" issue-term="title" label="Comment" theme="github-dark" crossorigin="anonymous" async> </script></div><script type="text/javascript"> $(function() { window.onmessage = evt => { if (evt.origin === 'https://utteranc.es') { toggle.updateCommentStyle(); window.onmessage = null; } } }); </script></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2023 <a href="https://twitter.com/hnrayer">elesos</a>. <span data-toggle="tooltip" data-placement="top" title="除非另有说明，本网站上的博客文章均由作者按照知识共享署名 4.0 国际 (CC BY 4.0) 许可协议进行授权。">保留部分权利。</span></p></div><div class="footer-right"><p class="mb-0"></p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">热门标签</h4><a class="post-tag" href="/tags/%E4%B9%A6%E6%91%98/">书摘</a> <a class="post-tag" href="/tags/c/">c</a> <a class="post-tag" href="/tags/python/">python</a> <a class="post-tag" href="/tags/qt/">qt</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E7%99%BE%E7%A7%91/">艺搜百科</a> <a class="post-tag" href="/tags/%E8%89%BA%E6%90%9C%E8%BD%AF%E4%BB%B6/">艺搜软件</a> <a class="post-tag" href="/tags/php/">php</a> <a class="post-tag" href="/tags/c/">c++</a> <a class="post-tag" href="/tags/ffmpeg/">ffmpeg</a> <a class="post-tag" href="/tags/linux/">linux</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">搜索结果为空</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/clipboard@2/dist/clipboard.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.16.1,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script defer src="/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id="></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); }); </script>
